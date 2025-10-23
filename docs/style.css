@@ -86,27 +86,46 @@ header {
 }
 .title-main-2::after { top: 80%; }
 
-/* スマホ：装飾線サイズ微調整（Web版完全一致） */
+/* スマホ：タイトルサイズ最適化（装飾線完全再現） */
 @media (max-width: 768px) {
+    .title-main-2 { 
+        font-size: 4rem; 
+        line-height: 1.0;  /* 1.1 → 1.0で線確保 */
+        margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 1;        /* 線より手前 */
+    }
+    
+    /* スマホ装飾線：Web版完全一致 */
     .title-main-2::before,
     .title-main-2::after {
-        width: 60px;    /* PC:100px → スマホ:60px */
-        height: 2.5px;  /* PC:4px  → スマホ:2.5px */
-        top: 22%;
+        width: 70px;       /* PC100px→70px */
+        height: 3px;       /* PC4px→3px */
+        top: 18%;          /* 微調整 */
+        background: linear-gradient(90deg, transparent, #b22222, #8b0000, transparent);
+        z-index: -1;       /* 文字の下 */
     }
-    .title-main-2::after { top: 78%; }
+    .title-main-2::after { top: 82%; }
 }
 
 @media (max-width: 480px) {
+    .title-main-2 { 
+        font-size: 3.2rem; 
+        line-height: 0.95;
+    }
     .title-main-2::before,
     .title-main-2::after {
-        width: 50px;    /* 超小画面:50px */
-        height: 2px;
-        top: 23%;
+        width: 55px;
+        height: 2.5px;
+        top: 19%;
     }
-    .title-main-2::after { top: 77%; }
+    .title-main-2::after { top: 81%; }
 }
-
+.title-main-2 {
+    /* 既存スタイルそのまま */
+    position: relative;
+    z-index: 1;  /* ← これ追加 */
+}
 .title-main-3 {
     font-family: 'Cinzel', serif;
     font-size: clamp(1.4rem, 3vw, 2.2rem);
