@@ -1,0 +1,18 @@
+[
+    {
+        "id": "1",
+        "title": "りんしゃんかいほー！",
+        "date": "2025/12/15 (日)",
+        "place": "東京ビッグサイト",
+        "tags": ["咲-Saki", "同人即売会"],
+        "image": "https://via.placeholder.com/400x200/ff6b6b/ffffff?text=りんしゃんかいほー！"
+    },
+    {
+        "id": "2", 
+        "title": "魔法少女まほうまつり",
+        "date": "2025/11/30 (日)",
+        "place": "大阪城ホール",
+        "tags": ["まどマギ", "同人即売会"],
+        "image": "https://via.placeholder.com/400x200/4ecdc4/ffffff?text=まほうまつり"
+    }
+]
