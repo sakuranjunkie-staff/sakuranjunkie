@@ -823,3 +823,27 @@ footer {
         font-size: 0.95rem;
     }
 }
+/* ライセンスリンク専用スタイル */
+.license-link {
+    background: linear-gradient(135deg, rgba(139,69,19,0.1), rgba(160,82,45,0.1));
+    border-color: rgba(139,69,19,0.3);
+    color: #8b4513;
+    font-weight: 700;
+}
+
+.license-link:hover {
+    background: linear-gradient(135deg, rgba(139,69,19,0.2), rgba(160,82,45,0.2));
+    border-color: #8b4513;
+    color: #8b4513;
+    box-shadow: 0 10px 30px rgba(139,69,19,0.3);
+    transform: translateY(-2px);
+}
+
+/* スマホ：ライセンスリンク強調 */
+@media (max-width: 768px) {
+    .license-link {
+        border-width: 3px;
+        font-size: 1.05rem;
+        padding: 1.1rem;
+    }
+}
