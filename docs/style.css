@@ -558,10 +558,12 @@ footer {
 
 /* フッター：各種リンクラベル */
 .footer-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* ← これ追加！ */
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
 }
 
 .footer-label {
