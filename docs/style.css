@@ -898,25 +898,26 @@ footer {
 .qualification-title::after { top: 55%; }
 
 .qualification-content {
-    font-family: 'Playfair Display', serif; /* Arial → Playfair */
-    font-size: clamp(1.1rem, 2.2vw, 1.3rem); /* サイズUP */
-    font-weight: 400; /* 軽すぎず重すぎず */
+    font-family: 'Playfair Display', serif; /* 格調高いまま */
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem); /* サイズUP */
+    font-weight: 500; /* 400 → 500で太さUP */
     color: #8b4513; /* 金茶 */
-    line-height: 1.8; /* 行間を広げて読みやすく */
-    letter-spacing: 0.02rem; /* 文字間を微調整 */
+    line-height: 2.0; /* 1.8 → 2.0で大行間 */
+    letter-spacing: 0.05rem; /* 0.02 → 0.05で文字間広め */
     text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* 軽い影で視認性UP */
 }
 
 .qualification-content p {
-    margin: 1rem 0;
-    padding: 0 1rem;
+    margin: 1.5rem 0;
+    padding: 0 1.5rem;
 }
 
-/* リスト用（既存を維持） */
+/* リスト用（既存維持） */
 .qualification-list {
     list-style: none;
     padding: 0;
-    margin: 1rem auto;
+    margin: 1.5rem auto;
     max-width: 700px;
     text-align: left;
     color: #8b4513;
@@ -950,8 +951,9 @@ footer {
     }
     
     .qualification-content {
-        font-size: clamp(1rem, 2.5vw, 1.2rem); /* スマホも読みやすく */
-        line-height: 1.7;
+        font-size: clamp(1.1rem, 2.8vw, 1.3rem); /* スマホも大きめ */
+        line-height: 1.9;
+        letter-spacing: 0.04rem;
     }
 }
 
@@ -961,6 +963,7 @@ footer {
     }
     
     .qualification-content {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.8;
     }
 }
