@@ -46,14 +46,22 @@ header {
 }
 
 .title-main-1 {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1.8rem, 4vw, 3.2rem);
-    font-weight: 500;
-    color: #8b4513;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
-    position: relative;
-    text-shadow: 2px 2px 4px rgba(139,69,19,0.3);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 900;
+    color: #fff; /* 必要に応じて調整 */
+    text-align: center;
+    margin: 0;
+    padding: 0.5rem 0;
+    background: linear-gradient(135deg, #b22222, #8b0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-transform: uppercase; ← これを削除 */
+}
+
+/* 必要なら小文字保持を明示 */
+.title-main-1 {
+    text-transform: none; /* 小文字・大文字を尊重 */
 }
 
 .title-main-2 {
