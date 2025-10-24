@@ -864,7 +864,7 @@ footer {
     max-width: 800px;
     margin: 2rem auto;
     padding: 2rem 1.5rem;
-    background: rgba(255, 245, 238, 0.9); /* 薄いクリーム色 */
+    background: rgba(255, 245, 238, 0.9);
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(139, 69, 19, 0.2);
     text-align: center;
@@ -874,7 +874,7 @@ footer {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 900;
-    color: #b22222; /* 深紅 */
+    color: #b22222;
     background: linear-gradient(135deg, #b22222, #8b0000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -898,15 +898,38 @@ footer {
 .qualification-title::after { top: 55%; }
 
 .qualification-content {
+    font-family: 'Playfair Display', serif; /* Arial → Playfair */
+    font-size: clamp(1.1rem, 2.2vw, 1.3rem); /* サイズUP */
+    font-weight: 400; /* 軽すぎず重すぎず */
     color: #8b4513; /* 金茶 */
-    font-family: 'Arial', sans-serif;
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    line-height: 1.6;
+    line-height: 1.8; /* 行間を広げて読みやすく */
+    letter-spacing: 0.02rem; /* 文字間を微調整 */
+    text-align: center;
 }
 
 .qualification-content p {
     margin: 1rem 0;
     padding: 0 1rem;
+}
+
+/* リスト用（既存を維持） */
+.qualification-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem auto;
+    max-width: 700px;
+    text-align: left;
+    color: #8b4513;
+}
+
+.qualification-list li {
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem 0;
+    background: rgba(255, 245, 238, 0.7);
+    border-left: 4px solid #b22222;
+    border-radius: 8px;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    transition: all 0.3s;
 }
 
 /* スマホ最適化 */
@@ -927,7 +950,8 @@ footer {
     }
     
     .qualification-content {
-        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+        font-size: clamp(1rem, 2.5vw, 1.2rem); /* スマホも読みやすく */
+        line-height: 1.7;
     }
 }
 
@@ -937,6 +961,6 @@ footer {
     }
     
     .qualification-content {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }
