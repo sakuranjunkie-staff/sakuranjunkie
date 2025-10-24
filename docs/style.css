@@ -850,3 +850,85 @@ footer {
         padding: 1.1rem;
     }
 }
+
+/* 参加資格セクション */
+.qualification-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem 1.5rem;
+    background: rgba(255, 245, 238, 0.9); /* 薄いクリーム色 */
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(139, 69, 19, 0.2);
+    text-align: center;
+}
+
+.qualification-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: #b22222; /* 深紅 */
+    background: linear-gradient(135deg, #b22222, #8b0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.qualification-title::before,
+.qualification-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #b22222, #8b0000, transparent);
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+.qualification-title::after { top: 55%; }
+
+.qualification-content {
+    color: #8b4513; /* 金茶 */
+    font-family: 'Arial', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+}
+
+.qualification-content p {
+    margin: 1rem 0;
+    padding: 0 1rem;
+}
+
+/* スマホ最適化 */
+@media (max-width: 768px) {
+    .qualification-section {
+        padding: 1.5rem 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .qualification-title {
+        font-size: clamp(1.8rem, 5vw, 2.4rem);
+    }
+    
+    .qualification-title::before,
+    .qualification-title::after {
+        width: 50px;
+        height: 2px;
+    }
+    
+    .qualification-content {
+        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .qualification-title {
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
+    }
+    
+    .qualification-content {
+        font-size: 0.9rem;
+    }
+}
