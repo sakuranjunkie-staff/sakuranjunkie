@@ -1052,3 +1052,113 @@ footer {
         font-size: 0.9rem;
     }
 }
+/* ハンバーガーメニュー */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    transition: all 0.3s;
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ナビゲーションバー */
+.navbar {
+    background: rgba(178, 34, 34, 0.9);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    background: rgba(255, 245, 238, 0.2);
+    color: #8b4513;
+    transform: translateY(-2px);
+}
+
+/* スマホ用ハンバーガーメニュー（スライドアニメーション） */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 250px; /* メニュー幅 */
+        position: fixed;
+        top: 60px;
+        right: 0; /* 初期位置: 右端 */
+        background: rgba(178, 34, 34, 0.95);
+        padding: 1rem 0;
+        text-align: center;
+        transform: translateX(100%); /* 初期: 画面外右 */
+        transition: transform 0.3s ease-in-out; /* スライドアニメーション */
+    }
+
+    .nav-links.active {
+        display: flex;
+        transform: translateX(0); /* アクティブ時: 左へスライド */
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 0.8rem 0;
+        width: 100%;
+    }
+}
+
+/* 既存セクション調整 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* スマホ用微調整 */
+@media (max-width: 480px) {
+    .nav-link {
+        font-size: 1.1rem;
+    }
+}
