@@ -1126,7 +1126,7 @@ footer {
     transform: translateY(-2px);
 }
 
-/* スマホ用ハンバーガーメニュー */
+/* スマホ用ハンバーガーメニュー（サイズ調整） */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -1135,7 +1135,8 @@ footer {
     .menu {
         display: none;
         flex-direction: column;
-        width: 250px;
+        width: 80vw; /* 250px → 80%で調整 */
+        max-width: 300px; /* 最大幅制限 */
         position: fixed;
         top: 60px;
         right: 0;
@@ -1152,8 +1153,8 @@ footer {
     }
 
     .nav-link {
-        font-size: 1.2rem;
-        padding: 0.8rem 0;
+        font-size: 1rem; /* 1.2rem → 1remでコンパクト */
+        padding: 0.6rem 0; /* パディング減 */
         width: 100%;
     }
 }
@@ -1162,9 +1163,10 @@ footer {
 html {
     scroll-behavior: smooth;
 }
+
 /* スマホ用微調整 */
 @media (max-width: 480px) {
     .nav-link {
-        font-size: 1.1rem;
+        font-size: 0.9rem; /* さらに縮小 */
     }
 }
