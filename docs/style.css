@@ -200,6 +200,7 @@ header {
 }
 
 .hero-image {
+    margin-top: 14px; /* 5mm（約14px）下にずらす */
     max-width: 1200px;
     margin: 4rem auto;
     padding: 0 2rem;
