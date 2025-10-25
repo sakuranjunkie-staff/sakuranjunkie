@@ -11,6 +11,16 @@
 </head>
 <body>
     <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#main-visual" class="nav-link">メインビジュアル</a></li>
+                <li><a href="#qualification" class="nav-link">イベント参加資格</a></li>
+                <li><a href="#date" class="nav-link">開催日</a></li>
+                <li><a href="#venue" class="nav-link">会場</a></li>
+                <li><a href="#recruitment" class="nav-link">合同誌募集</a></li>
+                <li><a href="#footer-links" class="nav-link">各リンク集</a></li>
+            </ul>
+        </nav>
         <div class="title-container">
             <h1 class="title-main-1">咲-Saki-シリーズオンリーイベント</h1>
             <h1 class="title-main-2">咲乱雀姫</h1>
@@ -23,9 +33,10 @@
             </a>
         </p>
     </header>
-
+    
     <main>
-        <div class="hero-image">
+        <!-- メインビジュアルセクション -->
+        <div class="hero-image" id="main-visual">
             <div class="image-placeholder">
                 <div class="placeholder-text">メインビジュアル制作中・近日公開予定</div>
             </div>
@@ -37,8 +48,8 @@
             </div>
         </div>
 
-    <!-- 参加資格セクション -->
-    <div class="qualification-section">
+        <!-- 参加資格セクション -->
+        <div class="qualification-section" id="qualification">
         <h2 class="qualification-title">イベント参加資格につきまして</h2>
         <div class="qualification-content">
             <p>どの媒体からでも構いません────</p>
@@ -51,6 +62,8 @@
 <div class="event-info">
     <h2>イベント情報</h2>
     <div class="info-grid">
+        <!-- 開催日セクション（仮） -->
+        <div class="event-section" id="date">
         <div class="info-item">
             <span class="icon">📅</span>
             <div>
@@ -59,6 +72,8 @@
             </div>
         </div>
         <div class="info-item">
+        　　 <!-- 会場セクション（仮） -->
+        　　<div class="event-section" id="venue">
             <span class="icon">📍</span>
             <div>
                 <strong>会場</strong><br>
@@ -66,6 +81,8 @@
             </div>
         </div>
         <div class="info-item">
+        <!-- 合同誌募集セクション（仮） -->
+        　　<div class="event-section" id="recruitment">
             <span class="icon">📚</span>
             <div>
                 <strong>咲-Saki-オンリーイベント
@@ -99,18 +116,26 @@
         </div>
     </main>
 
-    <!-- ①フッター修正 -->
-<div class="footer-links">
-    <a href="https://x.com/Tli6UYdZ4P68591" class="footer-link sht-link" target="_blank">
-        咲乱雀姫/咲姫繚乱 実行委員会本部
-    </a>
-    <a href="https://www.puniket.com/" class="footer-link puniket-link" target="_blank">
-        ぷにけっと準備会
-    </a>
-    <a href="https://www.puniket.com/sht/" class="footer-link sht-link" target="_blank">
-        スーパーヒロインタイム
-    </a>
-    <!-- ライセンスリンク追加 -->
-<a href="./license.html" class="footer-link license-link" target="_blank">
-    📜 ライセンス
-</a>
+    <!-- フッター（各リンク集） -->
+    <!-- 各リンク集セクション -->
+    <footer id="footer-links">
+        <div class="footer-container">
+            <div class="footer-label">各種リンク</div>
+            <div class="footer-links">
+                <a href="https://x.com/Tli6UYdZ4P68591" class="footer-link sht-link" target="_blank">
+                    咲乱雀姫/咲姫繚乱 実行委員会本部
+                </a>
+                <a href="https://www.puniket.com/" class="footer-link puniket-link" target="_blank">
+                    ぷにけっと準備会
+                </a>
+                <a href="https://www.puniket.com/sht/" class="footer-link sht-link" target="_blank">
+                    スーパーヒロインタイム
+                </a>
+                <a href="https://github.com/sakuranjunkie-staff/sakuranjunkie/blob/main/LICENSE" class="footer-link license-link" target="_blank">
+                    📜 ライセンス
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
