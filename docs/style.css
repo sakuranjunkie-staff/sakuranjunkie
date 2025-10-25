@@ -1126,7 +1126,7 @@ footer {
     transform: translateY(-2px);
 }
 
-/* スマホ用ハンバーガーメニュー（行間調整） */
+/* スマホ用ハンバーガーメニュー（幅と配置調整） */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -1135,13 +1135,13 @@ footer {
     .menu {
         display: none;
         flex-direction: column;
-        width: 70vw; /* 維持 */
-        max-width: 250px; /* 維持 */
+        width: 60vw; /* 70vw → 60vwでさらに狭く */
+        max-width: 220px; /* 250px → 220pxで上限縮小 */
         position: fixed;
         top: 60px;
         right: 0;
         background: rgba(178, 34, 34, 0.95);
-        padding: 0.5rem 0; /* 維持 */
+        padding: 0.3rem 0; /* 0.5rem → 0.3remでさらにコンパクト */
         text-align: center;
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
@@ -1154,9 +1154,9 @@ footer {
 
     .nav-link {
         font-size: 0.9rem; /* 維持 */
-        padding: 0.5rem 0; /* 維持 */
+        padding: 0.4rem 0; /* 0.5rem → 0.4remで間隔縮小 */
         width: 100%;
-        line-height: 1.2; /* デフォルト（約1.5）→ 1.2で縮小 */
+        line-height: 1.1; /* 1.2 → 1.1でさらに行間縮小 */
     }
 }
 
