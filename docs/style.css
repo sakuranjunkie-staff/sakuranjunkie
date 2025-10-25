@@ -1135,13 +1135,13 @@ footer {
     .menu {
         display: none;
         flex-direction: column;
-        width: 80vw; /* 250px → 80%で調整 */
-        max-width: 300px; /* 最大幅制限 */
+        width: 70vw; /* 80vw → 70vwでさらに狭く */
+        max-width: 250px; /* 300px → 250pxで上限調整 */
         position: fixed;
         top: 60px;
         right: 0;
         background: rgba(178, 34, 34, 0.95);
-        padding: 1rem 0;
+        padding: 0.5rem 0; /* 1rem → 0.5remでコンパクト */
         text-align: center;
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
@@ -1153,8 +1153,8 @@ footer {
     }
 
     .nav-link {
-        font-size: 1rem; /* 1.2rem → 1remでコンパクト */
-        padding: 0.6rem 0; /* パディング減 */
+        font-size: 0.9rem; /* 1rem → 0.9remで小さくした */
+        padding: 0.5rem 0; /* 0.6rem → 0.5remでさらにコンパクトにしてみる */
         width: 100%;
     }
 }
