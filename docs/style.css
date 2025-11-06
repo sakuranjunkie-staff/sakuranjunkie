@@ -1330,3 +1330,40 @@ h2::after {
         grid-template-columns: 1fr;
     }
 }
+/* タイトルコンテナ（深紅背景 + 白文字） */
+.title-container {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(178, 34, 34, 0.9); /* 深紅復活 */
+    color: #fff;
+    margin: 0;
+}
+
+.title-main-1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    color: #fff;
+}
+
+.title-main-2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0.5rem 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.title-main-3 {
+    font-size: 1.4rem;
+    font-style: italic;
+    margin: 0.5rem 0;
+    color: #e6e6e6;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* ヘッダー全体の順序確保 */
+header {
+    position: relative;
+    z-index: 999;
+}
