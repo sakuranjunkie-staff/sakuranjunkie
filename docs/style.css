@@ -1190,3 +1190,143 @@ html {
         font-size: 0.9rem; /* 維持 */
     }
 }
+
+/* === セクション共通の余白・区切り === */
+section,
+.qualification-section,
+.event-info,
+.osaka-announce,
+.coming-soon {
+    margin: 3rem auto;
+    padding: 2rem;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* 見出しを統一・目立たせる */
+h2 {
+    font-size: 1.8rem;
+    color: #b22222;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #b22222;
+    margin: 0.8rem auto 0;
+    border-radius: 2px;
+}
+
+/* === 各セクション個別調整 === */
+
+/* メインビジュアル */
+.hero-image {
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(178, 34, 34, 0.2);
+}
+
+.image-placeholder {
+    background: linear-gradient(135deg, #8b0000, #b22222);
+    padding: 3rem 1rem;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* 参加資格 */
+.qualification-section {
+    background: linear-gradient(to bottom, #fff5f5, #ffe4e1);
+    border: 1px solid #ffb6c1;
+}
+
+/* イベント情報グリッド */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.info-item {
+    background: #fff;
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+}
+
+/* 大阪イベント告知 */
+.osaka-announce {
+    background: linear-gradient(to right, #8b0000, #b22222);
+    color: #fff;
+    padding: 2.5rem;
+    border-radius: 16px;
+}
+
+.osaka-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+.west-side-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+/* 合同誌募集（画像風カード） */
+.coming-soon {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(178, 34, 34, 0.15);
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background: #b22222;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: #8b0000;
+    transform: translateY(-2px);
+}
+
+/* スマホ調整 */
+@media (max-width: 768px) {
+    section,
+    .qualification-section,
+    .event-info,
+    .osaka-announce,
+    .coming-soon {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
