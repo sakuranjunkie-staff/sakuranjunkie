@@ -1367,3 +1367,55 @@ header {
     position: relative;
     z-index: 999;
 }
+
+.title-container {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to bottom, #8b0000, #b22222); /* 深紅グラデ */
+    color: #fff;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.title-main-1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    color: #ffd700; /* 金色で目立つ */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+.title-main-2 {
+    font-size: 4.2rem;           /* さらに巨大化！ */
+    font-weight: 900;
+    margin: 1rem 0;
+    color: #ffffff;
+    text-shadow: 
+        0 0 10px rgba(255,255,255,0.8),
+        3px 3px 8px rgba(0,0,0,0.7);
+    letter-spacing: 0.08em;
+    line-height: 1.1;
+}
+
+.title-main-3 {
+    font-size: 1.8rem;
+    font-style: italic;
+    margin: 0.5rem 0;
+    color: #e6e6e6;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* スマホでも崩れない */
+@media (max-width: 768px) {
+    .title-main-2 {
+        font-size: 3.2rem;
+    }
+    .title-main-1 {
+        font-size: 1.2rem;
+    }
+    .title-main-3 {
+        font-size: 1.4rem;
+    }
+}
