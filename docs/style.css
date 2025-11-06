@@ -29,93 +29,117 @@ body::before {
     z-index: -2;
 }
 
-header { 
-    background: rgba(255,255,255,0.95); 
-    backdrop-filter: blur(20px);
-    padding: 4rem 2rem; 
-    text-align: center; 
-    box-shadow: 0 20px 80px rgba(0,0,0,0.15);
-    position: relative;
-}
-
-/* ②3段タイトル：気品あるゴシックデザイン */
-.title-container {
-    max-width: 1200px;
-    margin: 0 auto 2rem;
-    position: relative;
-}
-
-.title-main-1 {
+.compact-header {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 0.8rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
-    font-weight: 900;
-    color: #fff; /* 必要に応じて調整 */
+}
+
+.header-container {
+    max-width: 800px;           /* idolstarfes風の幅制限 */
+    margin: 0 auto;             /* 中央揃え */
     text-align: center;
+}
+
+/* ナビゲーション */
+.navbar {
+    margin: 0 0 0.4rem 0;
+    padding: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.3rem;
     margin: 0;
-    padding: 0.5rem 0;
-    background: linear-gradient(135deg, #b22222, #8b0000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* text-transform: uppercase; ← これを削除 */
+    padding: 0;
+    flex-wrap: wrap;
 }
 
-/* 必要なら小文字保持を明示 */
-.title-main-1 {
-    text-transform: none; /* 小文字・大文字を尊重 */
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    transition: all 0.2s;
 }
 
-.title-main-2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(4rem, 12vw, 8rem);
-    font-weight: 900;
-    background: linear-gradient(135deg, #b22222 0%, #8b0000 50%, #4a0000 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin: 0 auto 0.8rem;
-    position: relative;
-    text-shadow: 
-        0 0 20px rgba(178,34,34,0.5),
-        4px 4px 8px rgba(0,0,0,0.3);
-    letter-spacing: -0.02em;
+.nav-link:hover {
+    background: rgba(178, 34, 34, 0.12);
+    color: #b22222;
 }
 
-/* 装飾線（PC/Web版） */
-.title-main-2::before,
-.title-main-2::after {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(90deg, transparent, #b22222, #8b0000, transparent);
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
+/* タイトルエリア */
+.title-area {
+    margin: 0.2rem 0;
+    line-height: 1.2;
 }
-.title-main-2::after { top: 80%; }
 
-/* スマホ：タイトルサイズ最適化（装飾線完全再現） */
+.title-main {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #b22222;
+    margin: 0;
+    display: inline;
+}
+
+.title-sub {
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+    margin: 0;
+    display: inline;
+}
+
+/* イベント情報 */
+.event-info {
+    font-size: 0.85rem;
+    color: #555;
+    margin: 0.3rem 0 0 0;
+}
+
+.sht-link {
+    color: #b22222;
+    text-decoration: underline;
+}
+
+.sht-link:hover {
+    color: #8b0000;
+}
+
+/* スマホ対応：フル幅に戻す */
 @media (max-width: 768px) {
-    .title-main-2 { 
-        font-size: 4rem; 
-        line-height: 1.0;  /* 1.1 → 1.0で線確保 */
-        margin-bottom: 0.5rem;
-        position: relative;
-        z-index: 1;        /* 線より手前 */
+    .header-container {
+        max-width: 100%;
+        padding: 0 1rem;
     }
-    
-    /* スマホ装飾線：Web版完全一致 */
-    .title-main-2::before,
-    .title-main-2::after {
-        width: 70px;       /* PC100px→70px */
-        height: 3px;       /* PC4px→3px */
-        top: 18%;          /* 微調整 */
-        background: linear-gradient(90deg, transparent, #b22222, #8b0000, transparent);
-        z-index: -1;       /* 文字の下 */
-    }
-    .title-main-2::after { top: 82%; }
-}
 
+    .nav-links {
+        gap: 1rem;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 0.2rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .title-main {
+        font-size: 1.4rem;
+    }
+
+    .title-sub {
+        font-size: 0.85rem;
+    }
+}
 @media (max-width: 480px) {
     .title-main-2 { 
         font-size: 3.2rem; 
