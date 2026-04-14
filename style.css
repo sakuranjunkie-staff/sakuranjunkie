@@ -115,7 +115,7 @@ body::before {
 header {
     background: rgba(255,255,255,0.95);
     backdrop-filter: blur(20px);
-    padding: 4rem 2rem;
+    padding: 1.8rem 2rem 1.5rem;
     text-align: center;
     box-shadow: 0 20px 80px rgba(0,0,0,0.15);
     position: relative;
@@ -123,7 +123,7 @@ header {
 
 .title-container {
     max-width: 1200px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1rem;
     position: relative;
 }
 
@@ -139,7 +139,7 @@ header {
 
 .title-main-2 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(4rem, 12vw, 8rem);
+    font-size: clamp(3rem, 9vw, 6rem);
     font-weight: 900;
     background: linear-gradient(135deg, #b22222 0%, #8b0000 50%, #4a0000 100%);
     -webkit-background-clip: text;
@@ -199,7 +199,7 @@ header {
 
 .hero-image {
     max-width: 700px;
-    margin: 4rem auto;
+    margin: 2rem auto;
     padding: 0 1rem;
     text-align: center;
 }
@@ -402,7 +402,7 @@ footer {
    ════════════════════════════════════════ */
 
 @media (max-width: 1024px) {
-    .title-main-2 { font-size: 5.5rem; }
+    .title-main-2 { font-size: 4.5rem; }
     .info-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 }
 
@@ -431,7 +431,7 @@ footer {
     header { padding: 2rem 1rem; }
     .title-container { margin-bottom: 1.5rem; }
     .title-main-1 { font-size: 1.3rem; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
-    .title-main-2 { font-size: 4rem; line-height: 1.1; margin-bottom: 0.5rem; }
+    .title-main-2 { font-size: 3rem; line-height: 1.1; margin-bottom: 0.5rem; }
     .title-main-3 { font-size: 1.2rem; letter-spacing: 0.03em; }
     .subtitle { font-size: 1.1rem; line-height: 1.5; }
 
