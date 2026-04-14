@@ -29,7 +29,13 @@
 
 <main>
     <div id="top" class="hero-image">
-        <img src="main_visual.webp" alt="咲乱雀姫 メインビジュアル" class="hero-img">
+        <img src="main_visual.webp" alt="咲乱雀姫 メインビジュアル" class="hero-img" onclick="openLightbox()">
+    </div>
+
+    <!-- ライトボックス -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="閉じる">×</button>
+        <img src="main_visual_original.webp" alt="咲乱雀姫 メインビジュアル（原画）" class="lightbox-img">
     </div>
 
     <section id="circle" class="circle-section">
@@ -97,6 +103,20 @@
 </footer>
 
 <script>
+/* ライトボックス */
+function openLightbox() {
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e) {
+    if (!e || e.target !== document.querySelector('.lightbox-img')) {
+        document.getElementById('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+    }
+}
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+/* ナビ ハンバーガー */
 const toggle = document.getElementById('nav-toggle');
 const menu   = document.getElementById('nav-menu');
 toggle.addEventListener('click', () => {
