@@ -152,9 +152,19 @@ header {
 }
 
 .hero-image {
-    max-width: 1200px;
+    max-width: 500px;
     margin: 4rem auto;
     padding: 0 2rem;
+    text-align: center;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(139, 0, 0, 0.3);
 }
 .image-placeholder {
     width: 100%;
