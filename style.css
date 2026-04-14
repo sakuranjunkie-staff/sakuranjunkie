@@ -141,6 +141,50 @@ body::before {
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* ── ライトボックス ── */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.88);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.lightbox.open { display: flex; }
+
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 0 80px rgba(0,0,0,0.6);
+    cursor: default;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.4rem;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 201;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.3); }
+
 /* ── メインビジュアル ── */
 
 .hero-image {
@@ -156,7 +200,10 @@ body::before {
     margin: 0 auto;
     border-radius: 8px;
     box-shadow: 0 8px 32px rgba(139,0,0,0.3);
+    cursor: pointer;
+    transition: opacity 0.2s;
 }
+.hero-img:hover { opacity: 0.92; }
 
 /* ── サークル参加 ── */
 
