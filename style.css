@@ -296,48 +296,6 @@ body::before {
     display: block;
 }
 
-/* ── Coming Soon ── */
-
-.coming-soon {
-    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,240,245,0.9));
-    backdrop-filter: blur(20px);
-    border-radius: 40px;
-    padding: 5rem 4rem;
-    text-align: center;
-    box-shadow: 0 30px 100px rgba(0,0,0,0.15);
-    border: 2px solid rgba(178,34,34,0.2);
-}
-.coming-soon h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: #8b0000;
-    margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(139,0,0,0.3);
-}
-.coming-soon p {
-    font-size: 1.4rem;
-    color: #5d4037;
-    margin-bottom: 3rem;
-}
-.btn-primary {
-    display: inline-block;
-    padding: 1.5rem 4rem;
-    background: linear-gradient(135deg, #b22222, #8b0000);
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1.3rem;
-    font-weight: 700;
-    font-family: 'Cinzel', serif;
-    box-shadow: 0 15px 50px rgba(178,34,34,0.4);
-    transition: all 0.4s;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-.btn-primary:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 70px rgba(178,34,34,0.6);
-}
 
 /* ── フッター ── */
 
@@ -411,12 +369,6 @@ footer {
     .venue-grid { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.5rem; }
     .venue-map iframe { min-height: 240px; }
 
-    /* Coming Soon */
-    .coming-soon { padding: 2.5rem 2rem; margin: 2rem 0; border-radius: 25px; }
-    .coming-soon h3 { font-size: 2rem; }
-    .coming-soon p { font-size: 1.1rem; }
-    .btn-primary { padding: 1.2rem 2.5rem; font-size: 1.1rem; min-width: 280px; display: block; margin: 0 auto; }
-
     /* フッター */
     footer { padding: 2rem 1rem; }
     .footer-label { font-size: 1.3rem; margin-bottom: 1rem; }
@@ -426,6 +378,4 @@ footer {
 @media (max-width: 480px) {
     .nav-title { font-size: 1.2rem; }
     .circle-section h2 { font-size: 1.8rem; }
-    .coming-soon { padding: 2rem 1.5rem; }
-    .btn-primary { padding: 1rem 2rem; font-size: 1rem; min-width: 260px; }
 }
