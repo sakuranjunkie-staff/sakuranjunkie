@@ -205,6 +205,23 @@ body::before {
 }
 .hero-img:hover { opacity: 0.92; }
 
+.credit-text {
+    text-align: right;
+    font-size: 0.72rem;
+    color: #8b4513;
+    margin-top: 0.4rem;
+    opacity: 0.72;
+}
+.credit-text a {
+    color: #8b4513;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.credit-text a:hover {
+    color: #b22222;
+    text-decoration: underline;
+}
+
 /* ── サークル参加 ── */
 
 .circle-section {
