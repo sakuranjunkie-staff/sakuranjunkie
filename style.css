@@ -252,70 +252,100 @@ header {
     height: auto;
 }
 
-/* ── イベント情報 ── */
+/* ── 会場・アクセス ── */
 
-.event-info {
+.venue-section {
     max-width: 1000px;
     margin: 5rem auto;
     padding: 0 2rem;
 }
-.event-info h2 {
+.venue-section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
     background: linear-gradient(135deg, #b22222, #8b0000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
 }
-.info-grid {
+.venue-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
-    margin-bottom: 5rem;
-}
-.info-item {
-    background: rgba(255,255,255,0.85);
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background: rgba(255,255,255,0.88);
     backdrop-filter: blur(10px);
-    padding: 3rem 2.5rem;
     border-radius: 25px;
-    text-align: center;
-    box-shadow: 0 25px 80px rgba(0,0,0,0.15);
+    padding: 3rem;
+    box-shadow: 0 20px 70px rgba(0,0,0,0.12);
     border: 1px solid rgba(178,34,34,0.2);
-    transition: all 0.4s;
     position: relative;
     overflow: hidden;
 }
-.info-item::before {
+.venue-grid::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 4px;
     background: linear-gradient(90deg, #b22222, #8b0000, #b22222);
 }
-.info-item:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 40px 120px rgba(178,34,34,0.25);
+.venue-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #8b0000;
+    margin-bottom: 0.2rem;
 }
-.icon {
-    display: block;
-    font-size: 5rem;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, #b22222, #8b0000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.grid-link {
-    color: #b22222;
-    text-decoration: none;
-    font-weight: 600;
+.venue-hall {
     font-size: 1rem;
-    transition: all 0.3s;
-    display: block;
-    margin: 0.3rem 0;
+    color: #5d4037;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
-.grid-link:hover { color: #8b0000; text-shadow: 0 0 8px rgba(178,34,34,0.5); }
+.venue-address {
+    font-size: 0.9rem;
+    color: #5d4037;
+    line-height: 1.7;
+    margin-bottom: 1.8rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(178,34,34,0.15);
+}
+.access-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.access-item {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+}
+.access-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+.access-item strong {
+    font-size: 0.95rem;
+    color: #2c1810;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+.line-names {
+    font-size: 0.82rem;
+    color: #8b4513;
+}
+.venue-map {
+    display: flex;
+    align-items: stretch;
+}
+.venue-map iframe {
+    width: 100%;
+    min-height: 260px;
+    border-radius: 15px;
+    border: none;
+    flex: 1;
+}
 
 /* ── Coming Soon ── */
 
@@ -440,12 +470,11 @@ footer {
     .circle-section { margin: 2rem auto; padding: 0 1rem; }
     .circle-section h2 { font-size: 2rem; }
 
-    /* イベント情報 */
-    .event-info { margin: 3rem auto; padding: 0 1rem; }
-    .event-info h2 { font-size: 2.5rem; margin-bottom: 2rem; }
-    .info-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-    .info-item { padding: 2rem 1.5rem; margin-bottom: 1rem; }
-    .icon { font-size: 3.5rem; }
+    /* 会場・アクセス */
+    .venue-section { margin: 3rem auto; padding: 0 1rem; }
+    .venue-section h2 { font-size: 2rem; margin-bottom: 2rem; }
+    .venue-grid { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.5rem; }
+    .venue-map iframe { min-height: 240px; }
 
     /* Coming Soon */
     .coming-soon { padding: 2.5rem 2rem; margin: 2rem 0; border-radius: 25px; }
@@ -464,9 +493,6 @@ footer {
     .title-main-2 { font-size: 3.2rem; }
     .title-main-3 { font-size: 1rem; }
     .circle-section h2 { font-size: 1.8rem; }
-    .event-info h2 { font-size: 2rem; }
-    .info-item { padding: 1.5rem 1rem; }
-    .icon { font-size: 3rem; }
     .coming-soon { padding: 2rem 1.5rem; }
     .btn-primary { padding: 1rem 2rem; font-size: 1rem; min-width: 260px; }
 }
