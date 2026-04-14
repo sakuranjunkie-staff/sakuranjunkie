@@ -115,7 +115,7 @@ body::before {
 header {
     background: rgba(255,255,255,0.95);
     backdrop-filter: blur(20px);
-    padding: 1.8rem 2rem 1.5rem;
+    padding: 1.2rem 2rem 1rem;
     text-align: center;
     box-shadow: 0 20px 80px rgba(0,0,0,0.15);
     position: relative;
@@ -123,18 +123,19 @@ header {
 
 .title-container {
     max-width: 1200px;
-    margin: 0 auto 1rem;
+    margin: 0 auto;
     position: relative;
 }
 
 .title-main-1 {
     font-family: 'Cinzel', serif;
-    font-size: clamp(1.8rem, 4vw, 3.2rem);
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
     font-weight: 500;
     color: #8b4513;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(139,69,19,0.3);
+    letter-spacing: 0.12em;
+    margin-bottom: 0.3rem;
+    text-shadow: none;
+    opacity: 0.85;
 }
 
 .title-main-2 {
@@ -162,38 +163,15 @@ header {
 
 .title-main-3 {
     font-family: 'Cinzel', serif;
-    font-size: clamp(1.4rem, 3vw, 2.2rem);
-    font-weight: 600;
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    font-weight: 500;
     font-style: italic;
     color: #2f4f4f;
-    letter-spacing: 0.05em;
-    margin-top: 0.5rem;
-    text-shadow: 1px 1px 3px rgba(47,79,79,0.4);
+    letter-spacing: 0.08em;
+    margin-top: 0.2rem;
+    opacity: 0.8;
 }
 
-.subtitle {
-    font-size: 1.4rem;
-    color: #5d4037;
-    font-weight: 400;
-    font-family: 'Noto Serif JP', serif;
-}
-.sht-subtitle-link {
-    color: #5d4037;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s;
-    position: relative;
-}
-.sht-subtitle-link:hover { color: #8b0000; text-shadow: 0 0 8px rgba(178,34,34,0.4); }
-.sht-subtitle-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px; left: 0;
-    width: 0; height: 2px;
-    background: linear-gradient(90deg, #b22222, #8b0000);
-    transition: width 0.3s;
-}
-.sht-subtitle-link:hover::after { width: 100%; }
 
 /* ── メインビジュアル ── */
 
@@ -461,12 +439,8 @@ footer {
     }
 
     /* ヘッダー */
-    header { padding: 2rem 1rem; }
-    .title-container { margin-bottom: 1.5rem; }
-    .title-main-1 { font-size: 1.3rem; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
-    .title-main-2 { font-size: 3rem; line-height: 1.1; margin-bottom: 0.5rem; }
-    .title-main-3 { font-size: 1.2rem; letter-spacing: 0.03em; }
-    .subtitle { font-size: 1.1rem; line-height: 1.5; }
+    header { padding: 1rem; }
+    .title-main-2 { font-size: 3rem; line-height: 1.1; }
 
     /* メインビジュアル・サークル */
     .hero-image { margin: 2rem auto; }
@@ -492,9 +466,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .title-main-1 { font-size: 1.1rem; }
-    .title-main-2 { font-size: 3.2rem; }
-    .title-main-3 { font-size: 1rem; }
+    .title-main-2 { font-size: 2.8rem; }
     .circle-section h2 { font-size: 1.8rem; }
     .coming-soon { padding: 2rem 1.5rem; }
     .btn-primary { padding: 1rem 2rem; font-size: 1rem; min-width: 260px; }
