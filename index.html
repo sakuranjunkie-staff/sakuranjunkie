@@ -33,7 +33,7 @@
     </div>
 
     <!-- ライトボックス -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <div id="lightbox" class="lightbox" style="display:none" onclick="closeLightbox(event)">
         <button class="lightbox-close" onclick="closeLightbox()" aria-label="閉じる">×</button>
         <img src="main_visual_original.webp" alt="咲乱雀姫 メインビジュアル（原画）" class="lightbox-img">
     </div>
@@ -104,13 +104,14 @@
 
 <script>
 /* ライトボックス */
+const lb = document.getElementById('lightbox');
 function openLightbox() {
-    document.getElementById('lightbox').classList.add('open');
+    lb.style.display = 'flex';
     document.body.style.overflow = 'hidden';
 }
 function closeLightbox(e) {
     if (!e || e.target !== document.querySelector('.lightbox-img')) {
-        document.getElementById('lightbox').classList.remove('open');
+        lb.style.display = 'none';
         document.body.style.overflow = '';
     }
 }
