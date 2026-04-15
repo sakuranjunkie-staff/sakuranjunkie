@@ -126,12 +126,13 @@ body::before {
 }
 .nav-countdown-meta {
     display: block;
-    font-family: 'Cinzel', serif;
-    font-size: 0.68rem;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.9rem;
+    font-weight: 600;
     color: #8b4513;
-    letter-spacing: 0.08em;
-    opacity: 0.78;
-    margin-bottom: 0.05rem;
+    letter-spacing: 0.04em;
+    opacity: 0.85;
+    margin-bottom: 0.1rem;
     text-decoration: none;
 }
 .nav-countdown-meta:hover {
