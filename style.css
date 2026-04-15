@@ -409,62 +409,47 @@ body::before {
 }
 
 
-/* ── シェアボタン ── */
+/* ── ナビシェアボタン（左側・アイコンのみ） ── */
 
-.share-section {
-    text-align: center;
-    padding: 0.8rem 1rem;
-    border-bottom: 1px solid rgba(178,34,34,0.1);
-}
-.share-buttons {
+.nav-share {
+    position: absolute;
+    left: 2rem;
+    bottom: 0.35rem;
     display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
 }
-.share-icon {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.1em;
-    margin-right: 0.35em;
-    flex-shrink: 0;
-}
-.share-btn {
+.nav-share-btn {
     display: inline-flex;
     align-items: center;
-    padding: 0.55rem 1.4rem;
-    border-radius: 50px;
-    font-family: 'Noto Serif JP', serif;
-    font-size: 0.85rem;
-    font-weight: 600;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
     text-decoration: none;
+    border: none;
+    cursor: pointer;
     transition: opacity 0.2s, transform 0.15s;
-    letter-spacing: 0.04em;
+    flex-shrink: 0;
 }
-.share-btn:hover {
-    opacity: 0.85;
+.nav-share-btn svg {
+    width: 16px;
+    height: 16px;
+}
+.nav-share-btn:hover {
+    opacity: 0.78;
     transform: translateY(-1px);
 }
-.share-x {
-    background: #000;
-    color: #fff;
-}
-.share-line {
-    background: #06c755;
-    color: #fff;
-}
-.share-fb {
-    background: #1877f2;
-    color: #fff;
-}
-.share-copy {
+.nav-share-x   { background: #000; color: #fff; }
+.nav-share-line { background: #06c755; color: #fff; }
+.nav-share-fb  { background: #1877f2; color: #fff; }
+.nav-share-copy {
     background: transparent;
     color: #8b4513;
-    border: 1.5px solid rgba(139,69,19,0.4);
-    cursor: pointer;
+    border: 1.5px solid rgba(139,69,19,0.35);
     font-family: inherit;
 }
-.share-copy:hover {
+.nav-share-copy:hover {
     background: rgba(139,69,19,0.06);
 }
 
@@ -514,6 +499,7 @@ footer {
     .nav-label, .nav-subtitle-de { display: none; }
     .nav-title { font-size: 1.4rem; }
     .nav-countdown { display: none; }
+    .nav-share { display: none; }
     .nav-toggle { display: flex; }
     .nav-menu {
         display: none;
