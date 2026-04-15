@@ -409,6 +409,65 @@ body::before {
 }
 
 
+/* ── シェアボタン ── */
+
+.share-section {
+    text-align: center;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgba(178,34,34,0.1);
+}
+.share-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.share-icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.1em;
+    margin-right: 0.35em;
+    flex-shrink: 0;
+}
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.55rem 1.4rem;
+    border-radius: 50px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.15s;
+    letter-spacing: 0.04em;
+}
+.share-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+.share-x {
+    background: #000;
+    color: #fff;
+}
+.share-line {
+    background: #06c755;
+    color: #fff;
+}
+.share-fb {
+    background: #1877f2;
+    color: #fff;
+}
+.share-copy {
+    background: transparent;
+    color: #8b4513;
+    border: 1.5px solid rgba(139,69,19,0.4);
+    cursor: pointer;
+    font-family: inherit;
+}
+.share-copy:hover {
+    background: rgba(139,69,19,0.06);
+}
+
 /* ── フッター ── */
 
 footer {
