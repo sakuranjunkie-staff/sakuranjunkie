@@ -116,36 +116,36 @@ body::before {
 .nav-link:hover { color: #8b0000; }
 .nav-link:hover::after { width: 100%; }
 
-/* カウントダウン（ナビ右側） */
+/* カウントダウン（ナビ右側・メニュー行と同じ高さ） */
 .nav-countdown {
     position: absolute;
     right: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    line-height: 1.15;
+    bottom: 0.35rem;
+    text-align: right;
+    line-height: 1.2;
 }
-.nav-countdown-date {
+.nav-countdown-meta {
     display: block;
     font-family: 'Cinzel', serif;
-    font-size: 0.6rem;
+    font-size: 0.68rem;
     color: #8b4513;
-    letter-spacing: 0.12em;
-    opacity: 0.75;
+    letter-spacing: 0.08em;
+    opacity: 0.78;
+    margin-bottom: 0.05rem;
 }
 .nav-countdown-days {
     display: flex;
     align-items: baseline;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 0.1em;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     color: #b22222;
-    font-size: 1.5rem;
+    font-size: 2rem;
     letter-spacing: -0.01em;
 }
 .nav-countdown-unit {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     font-family: 'Noto Serif JP', serif;
     color: #8b4513;
     font-weight: 600;
