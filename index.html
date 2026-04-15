@@ -21,6 +21,10 @@
             <li><a href="#circle" class="nav-link">サークル参加</a></li>
             <li><a href="#info" class="nav-link">会場・アクセス</a></li>
         </ul>
+        <div class="nav-countdown" aria-label="開催まであと何日">
+            <span class="nav-countdown-date">2026.9.22</span>
+            <span class="nav-countdown-days"><span id="countdown-days">--</span><span class="nav-countdown-unit">日前</span></span>
+        </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="メニューを開く">
             <span></span><span></span><span></span>
         </button>
@@ -118,6 +122,19 @@ function closeLightbox(e) {
     }
 }
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+/* カウントダウン */
+(function() {
+    var EVENT = new Date('2026-09-22T00:00:00+09:00');
+    function update() {
+        var diff = EVENT - new Date();
+        var days = diff > 0 ? Math.ceil(diff / 86400000) : 0;
+        var el = document.getElementById('countdown-days');
+        if (el) el.textContent = days;
+    }
+    update();
+    setInterval(update, 60000);
+})();
 
 /* ナビ ハンバーガー */
 const toggle = document.getElementById('nav-toggle');

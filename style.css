@@ -116,6 +116,41 @@ body::before {
 .nav-link:hover { color: #8b0000; }
 .nav-link:hover::after { width: 100%; }
 
+/* カウントダウン（ナビ右側） */
+.nav-countdown {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    line-height: 1.15;
+}
+.nav-countdown-date {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    color: #8b4513;
+    letter-spacing: 0.12em;
+    opacity: 0.75;
+}
+.nav-countdown-days {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.1em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #b22222;
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+}
+.nav-countdown-unit {
+    font-size: 0.65rem;
+    font-family: 'Noto Serif JP', serif;
+    color: #8b4513;
+    font-weight: 600;
+}
+
 /* ハンバーガーボタン（デスクトップでは非表示） */
 .nav-toggle {
     display: none;
@@ -406,6 +441,7 @@ footer {
     /* ナビ：ハンバーガー展開 */
     .nav-label, .nav-subtitle-de { display: none; }
     .nav-title { font-size: 1.4rem; }
+    .nav-countdown { display: none; }
     .nav-toggle { display: flex; }
     .nav-menu {
         display: none;
