@@ -310,6 +310,43 @@ body::before {
     height: auto;
 }
 
+/* ── 一般参加 ── */
+
+.general-section {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+.general-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    background: linear-gradient(135deg, #b22222, #8b0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.general-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.9rem 2.5rem;
+    background: linear-gradient(135deg, #b22222, #8b0000);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 40px;
+    box-shadow: 0 6px 24px rgba(178,34,34,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    letter-spacing: 0.05em;
+}
+.general-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(178,34,34,0.45);
+}
+
 /* ── 会場・アクセス ── */
 
 .venue-section {
@@ -477,6 +514,24 @@ footer {
     margin-bottom: 1.5rem;
     letter-spacing: 0.05em;
     text-shadow: 1px 1px 2px rgba(139,0,0,0.3);
+}
+.footer-label-links {
+    margin-top: 2rem;
+}
+.footer-contact {
+    font-size: 1rem;
+    color: #5d4037;
+    margin-bottom: 0.5rem;
+    line-height: 1.8;
+}
+.contact-link {
+    color: #8b0000;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+.contact-link:hover {
+    opacity: 0.7;
 }
 .copyright {
     margin-top: 1.5rem;
