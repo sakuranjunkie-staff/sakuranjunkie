@@ -190,7 +190,11 @@ function copyLink() {
 /* スクロールオフセット（固定ナビ分を動的に補正） */
 function updateScrollPadding() {
     const nav = document.getElementById('site-nav');
-    if (nav) document.documentElement.style.scrollPaddingTop = (nav.offsetHeight + 16) + 'px';
+    const navMenu = document.getElementById('nav-menu');
+    if (nav) {
+        const menuH = (navMenu && navMenu.classList.contains('open')) ? navMenu.offsetHeight : 0;
+        document.documentElement.style.scrollPaddingTop = (nav.offsetHeight - menuH + 16) + 'px';
+    }
 }
 updateScrollPadding();
 window.addEventListener('resize', updateScrollPadding);
