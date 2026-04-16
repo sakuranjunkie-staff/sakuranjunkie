@@ -187,6 +187,14 @@ function copyLink() {
     setInterval(update, 60000);
 })();
 
+/* スクロールオフセット（固定ナビ分を動的に補正） */
+function updateScrollPadding() {
+    const nav = document.getElementById('site-nav');
+    if (nav) document.documentElement.style.scrollPaddingTop = (nav.offsetHeight + 16) + 'px';
+}
+updateScrollPadding();
+window.addEventListener('resize', updateScrollPadding);
+
 /* ナビ ハンバーガー */
 const toggle = document.getElementById('nav-toggle');
 const menu   = document.getElementById('nav-menu');
