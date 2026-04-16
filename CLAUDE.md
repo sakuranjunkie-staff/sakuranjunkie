@@ -86,7 +86,7 @@ docs/               その他ドキュメント
 
 - [ ] イラストレーター（ゆんこ氏）からメインビジュアルへのテキスト挿入待ち
 - [ ] SHTから秋の申し込みフォームURL入手 → サークル参加バナーリンク先を更新
-- [ ] DNS確認完了後にGitHub Pages の Enforce HTTPS を有効化
+- [x] DNS確認完了・GitHub Pages の Enforce HTTPS 有効化（2026/4/16）
 - [ ] シェアボタンURLとOGPメタタグを旧GitHub Pages URLから `sakuranjyanki.jp` に更新（任意）
 
 ## CSS変数・設計メモ
