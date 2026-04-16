@@ -61,20 +61,20 @@
 
 <main>
     <div id="top" class="hero-image">
-        <img src="main_visual.webp" alt="咲乱雀姫 メインビジュアル" class="hero-img" onclick="openLightbox()">
+        <img src="main_visual.webp" alt="咲乱雀姫 メインビジュアル" class="hero-img" onclick="openLightbox('main_visual_original.webp','咲乱雀姫 メインビジュアル（原画）')">
         <p class="credit-text"><a href="https://x.com/haruno_rai" target="_blank" rel="noopener">Illustration by ゆんこ</a></p>
     </div>
 
     <!-- ライトボックス -->
     <div id="lightbox" class="lightbox" style="display:none" onclick="closeLightbox(event)">
         <button class="lightbox-close" onclick="closeLightbox()" aria-label="閉じる">×</button>
-        <img src="main_visual_original.webp" alt="咲乱雀姫 メインビジュアル（原画）" class="lightbox-img">
+        <img src="" alt="" id="lightbox-img" class="lightbox-img">
     </div>
 
     <section id="circle" class="circle-section">
         <h2>サークル参加</h2>
         <p class="circle-desc"><a href="https://www.puniket.com/sht/" target="_blank" rel="noopener">サークル参加要項</a>をご確認後、以下のバナーをクリックして、スーパーヒロインタイムHPの「オンライン申し込み」からお手続きを完了させてください</p>
-        <a href="http://www.puniket.com/sht/" target="_blank" class="circle-banner-link">
+        <a href="http://www.puniket.com/sht/" target="_blank" class="circle-banner-link" onclick="openLightbox('docs/images/バナー元画像.jpg','咲乱雀姫 バナー（原画）')">
             <img src="sakuran_banner.webp" alt="咲乱雀姫 サークル参加申し込みはこちら" class="circle-banner-img">
         </a>
         <p class="credit-text"><a href="https://x.com/momodaje_726" target="_blank" rel="noopener">Illustration by ももよ</a></p>
@@ -153,12 +153,15 @@
 <script>
 /* ライトボックス */
 const lb = document.getElementById('lightbox');
-function openLightbox() {
+const lbImg = document.getElementById('lightbox-img');
+function openLightbox(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt || '';
     lb.style.display = 'flex';
     document.body.style.overflow = 'hidden';
 }
 function closeLightbox(e) {
-    if (!e || e.target !== document.querySelector('.lightbox-img')) {
+    if (!e || e.target !== lbImg) {
         lb.style.display = 'none';
         document.body.style.overflow = '';
     }
