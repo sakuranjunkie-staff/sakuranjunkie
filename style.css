@@ -2,6 +2,8 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+html { scroll-padding-top: 130px; }
+
 body {
     font-family: 'Noto Serif JP', serif;
     background:
