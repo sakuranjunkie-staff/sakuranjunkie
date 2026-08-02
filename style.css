@@ -599,3 +599,136 @@ footer {
     .nav-title { font-size: 1.2rem; }
     .circle-section h2 { font-size: 1.8rem; }
 }
+
+/* ===== 合同誌枠（2026-08-02 追加） ===== */
+.godoshi-section {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+.godoshi-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.4rem;
+    background: linear-gradient(135deg, #b22222, #8b0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.godoshi-hero {
+    display: grid;
+    grid-template-columns: minmax(200px, 300px) 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+.godoshi-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 12px 34px rgba(139, 0, 0, 0.28);
+    transition: transform 0.25s ease;
+}
+.godoshi-cover:hover img { transform: translateY(-4px); }
+.godoshi-kicker {
+    font-size: 0.9rem;
+    letter-spacing: 0.16em;
+    color: #8b4513;
+    margin-bottom: 0.4rem;
+}
+.godoshi-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    line-height: 1.1;
+    color: #8b0000;
+    margin: 0;
+}
+.godoshi-title span { color: #b22222; margin: 0 0.08em; }
+.godoshi-sub {
+    font-size: 1.15rem;
+    color: #5d4037;
+    margin: 0.3rem 0 1rem;
+}
+.godoshi-spec {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: #5d4037;
+}
+/* 右から左へ流れるサンプル帯。高さだけ揃え、幅は素材のまま＝絵を切らない */
+.godoshi-marquee {
+    overflow: hidden;
+    padding: 0.8rem 0;
+    margin-bottom: 1.8rem;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: max-content;
+    animation: mq-scroll linear infinite;
+}
+.godoshi-marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes mq-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+.mq-item {
+    display: block;
+    height: 150px;
+    flex: 0 0 auto;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(139, 0, 0, 0.16);
+}
+.mq-item img { height: 100%; width: auto; display: block; }
+.mq-novel {
+    width: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 0.3rem;
+    background: linear-gradient(160deg, #fdfbf7 0%, #f7efe6 100%);
+    border: 1px solid rgba(178, 34, 34, 0.18);
+}
+.mq-novel-title {
+    writing-mode: vertical-rl;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #2c1810;
+    letter-spacing: 0.1em;
+    line-height: 1.7;
+    max-height: 100%;
+}
+.godoshi-more {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #b22222, #8b0000);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(139, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.godoshi-more:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(139, 0, 0, 0.32);
+}
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; }
+    .godoshi-marquee { overflow-x: auto; }
+}
+@media (max-width: 768px) {
+    .godoshi-hero { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }
+    .godoshi-cover { max-width: 260px; margin: 0 auto; }
+    .godoshi-title { font-size: 2.2rem; }
+    .mq-item { height: 116px; }
+    .mq-novel { width: 88px; }
+}

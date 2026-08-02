@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合同誌 JUNKIE×JUNKIE - 咲乱雀姫</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="godoshi.css?v=20260802">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- OGP / SNSシェア用メタ情報 -->
+    <meta property="og:title" content="咲-Saki-ライバル合同誌『JUNKIE×JUNKIE』">
+    <meta property="og:description" content="A5判230ページ・全44作品。2026年9月22日「咲乱雀姫01」（大田区産業プラザPiO）にて頒布。">
+    <meta property="og:image" content="https://sakuranjunkie-staff.github.io/sakuranjunkie/godoshi/cover.webp">
+    <meta property="og:url" content="https://sakuranjunkie-staff.github.io/sakuranjunkie/godoshi/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="咲乱雀姫">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="咲-Saki-ライバル合同誌『JUNKIE×JUNKIE』">
+    <meta name="twitter:description" content="A5判230ページ・全44作品。咲乱雀姫01にて頒布。">
+</head>
+<body>
+
+<nav class="site-nav" id="site-nav">
+    <div class="nav-inner">
+        <div class="nav-brand-center">
+            <span class="nav-label">咲-Saki-シリーズオンリーイベント</span>
+            <a href="../index.html" class="nav-title">咲乱雀姫</a>
+            <span class="nav-subtitle-de">Die derangierten Süchtigen</span>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="../index.html#circle" class="nav-link">サークル参加</a></li>
+            <li><a href="../index.html#general" class="nav-link">一般参加</a></li>
+            <li><a href="../index.html#info" class="nav-link">会場・アクセス</a></li>
+            <li><a href="#works" class="nav-link">合同誌</a></li>
+        </ul>
+        <div class="nav-countdown" aria-label="開催まであと何日">
+            <a href="https://www.puniket.com/sht/" target="_blank" rel="noopener" class="nav-countdown-meta">開催日 2026.9.22 &nbsp;|&nbsp; 大田区産業プラザPiO</a>
+            <span class="nav-countdown-days">開催日まで残り&nbsp;<span id="countdown-days">--</span><span class="nav-countdown-unit">日</span></span>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="メニューを開く">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<main>
+    <div id="top" class="book-hero">
+        <div class="book-cover">
+            <img src="cover.webp" alt="JUNKIE×JUNKIE 表紙" onclick="openLightbox('cover.webp','JUNKIE×JUNKIE 表紙')">
+        </div>
+        <div class="book-info">
+            <h1>JUNKIE×JUNKIE</h1>
+            <p class="book-sub">咲-Saki- ライバル合同誌 〜雀姫×雀鬼〜</p>
+            <ul class="book-spec">
+                <li><strong>仕様</strong>：A5判・230ページ（巻頭カラー16P＋モノクロ本文）</li>
+                <li><strong>頒布価格</strong>：2,000円</li>
+                <li><strong>頒布日</strong>：2026年9月22日（火・祝）「咲乱雀姫01」</li>
+                <li><strong>会場</strong>：大田区産業プラザPiO 大展示ホール</li>
+            </ul>
+        </div>
+    </div>
+
+    <section id="works" class="works-section">
+        <h2>WORKS</h2>
+        <p class="works-desc">全44作品・寄稿者40名</p>
+        <div class="works-grid" id="works-grid"></div>
+    </section>
+
+    <!-- ライトボックス -->
+    <div id="lightbox" class="lightbox" style="display:none" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="閉じる">×</button>
+        <div id="lightbox-body" class="lightbox-body"></div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-label">お問い合わせ</div>
+        <p class="footer-contact">
+            イベントに関するお問い合わせは公式Xまでお願いします。<br>
+            <a href="https://x.com/Tli6UYdZ4P68591" target="_blank" rel="noopener" class="contact-link">咲乱雀姫/咲姫繚乱 実行委員会（X）</a>
+        </p>
+        <p class="copyright">© 2026 咲乱雀姫/咲姫繚乱 実行委員会. All rights reserved.<br>掲載作品の著作権は各作者に帰属します。無断転載を禁じます。</p>
+    </div>
+</footer>
+
+<script src="data.js?v=20260802"></script>
+<script>
+/* 作品グリッド描画（データ正本=data.js） */
+function esc(s) {
+    return String(s || '').replace(/[&<>"']/g, c => ({
+        '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    })[c]);
+}
+function genreOf(type) {
+    if (type.includes('小説')) return '小説';
+    if (type.includes('漫画')) return '漫画';
+    return 'イラスト';
+}
+function thumbHtml(w) {
+    const genre = genreOf(w.type);
+    if (genre === '小説' && w.title) {
+        /* 小説はサンプルがあってもタイトルタイルのまま。クリックでサンプル頁を開く */
+        const tile = `<div class="novel-tile"><span class="novel-title">${esc(w.title)}</span></div>`;
+        if (w.samples && w.samples.length) {
+            return `<a class="card-thumb clickable" onclick="openSamples('${esc(w.id)}')">${tile}` +
+                   `<span class="sample-badge">SAMPLE</span></a>`;
+        }
+        return `<div class="card-thumb">${tile}</div>`;
+    }
+    if (w.samples && w.samples.length) {
+        const t = esc(w.samples[0]);
+        return `<a class="card-thumb clickable" onclick="openSamples('${esc(w.id)}')">` +
+               `<img src="${t}" alt="${esc(w.author)} サンプル" loading="lazy"></a>`;
+    }
+    return `<div class="card-thumb"><div class="thumb-pending">` +
+           `<span class="pending-en">SAMPLE</span><span class="pending-ja">準備中</span></div></div>`;
+}
+function cardHtml(w) {
+    const genre = genreOf(w.type);
+    const xLink = w.x
+        ? `<a class="card-x" href="https://x.com/${esc(w.x.replace('@',''))}" target="_blank" rel="noopener">𝕏 ${esc(w.x)}</a>`
+        : '';
+    return `<article class="work-card">
+        <div class="card-versus"><span class="vs-label">VERSUS</span>
+            <span class="vs-text">${esc(w.rival)}</span></div>
+        ${thumbHtml(w)}
+        <div class="card-meta"><span class="card-author">${esc(w.author)}</span>
+            <span class="card-genre">${genre}</span>${xLink}</div>
+    </article>`;
+}
+document.getElementById('works-grid').innerHTML =
+    window.GODOSHI_DATA.works.map(cardHtml).join('');
+
+/* ライトボックス（単画像＝表紙、複数頁＝サンプル） */
+const lb = document.getElementById('lightbox');
+const lbBody = document.getElementById('lightbox-body');
+function showLb(html, multi) {
+    lbBody.innerHTML = html;
+    lbBody.classList.toggle('multi', !!multi);
+    lb.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+function openLightbox(src, alt) {
+    showLb(`<img src="${esc(src)}" alt="${esc(alt)}" class="lightbox-img">`, false);
+}
+function openSamples(id) {
+    const w = window.GODOSHI_DATA.works.find(x => x.id === id);
+    if (!w || !w.samples || !w.samples.length) return;
+    showLb(w.samples.map((s, i) =>
+        `<img src="${esc(s)}" alt="${esc(w.author)} サンプル ${i + 1}" class="lightbox-img" loading="lazy">`
+    ).join(''), w.samples.length > 1);
+}
+function closeLightbox(e) {
+    if (!e || e.target === lb || e.target === lbBody) {
+        lb.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+}
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+/* カウントダウン */
+(function() {
+    var EVENT = new Date('2026-09-22T00:00:00+09:00');
+    var el = document.getElementById('countdown-days');
+    if (el) {
+        var diff = EVENT - new Date();
+        el.textContent = diff > 0 ? Math.ceil(diff / 86400000) : 0;
+    }
+})();
+
+/* ナビ ハンバーガー */
+const toggle = document.getElementById('nav-toggle');
+const menu = document.getElementById('nav-menu');
+toggle.addEventListener('click', () => {
+    menu.classList.toggle('open');
+    toggle.classList.toggle('open');
+});
+</script>
+
+</body>
+</html>

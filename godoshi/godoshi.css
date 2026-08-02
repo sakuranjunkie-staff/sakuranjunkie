@@ -1,0 +1,219 @@
+/* ── 合同誌ページ（JUNKIE×JUNKIE）専用スタイル ── */
+
+/* 表紙ヒーロー */
+.book-hero {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: minmax(220px, 340px) 1fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+.book-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(139,0,0,0.3);
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.book-cover img:hover { opacity: 0.92; }
+.book-info h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, #b22222 0%, #8b0000 50%, #4a0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.15;
+}
+.book-info .book-sub {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #5d4037;
+    margin: 0.3rem 0 1.2rem;
+}
+.book-spec {
+    list-style: none;
+    font-size: 0.95rem;
+    color: #5d4037;
+    line-height: 2;
+}
+.book-spec strong { color: #8b0000; }
+
+/* 作品グリッド */
+.works-section {
+    max-width: 1150px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+.works-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(135deg, #b22222, #8b0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.works-desc {
+    text-align: center;
+    color: #5d4037;
+    margin: 0.4rem 0 2.2rem;
+}
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+    gap: 1.6rem;
+    align-items: start;   /* カードは素材の高さで止める＝行内で下端は揃わなくてよい */
+}
+.work-card {
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(178,34,34,0.2);
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.09);
+    transition: transform 0.25s, box-shadow 0.25s;
+    display: flex;
+    flex-direction: column;
+}
+.work-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #b22222, #8b0000, #b22222);
+    z-index: 1;
+}
+.work-card:hover { transform: translateY(-4px); box-shadow: 0 14px 40px rgba(178,34,34,0.22); }
+.card-versus {
+    padding: 0.7rem 1rem 0.55rem;
+    border-bottom: 1px solid rgba(178,34,34,0.12);
+}
+.card-versus .vs-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.58rem;
+    color: #8b4513;
+    letter-spacing: 0.18em;
+    opacity: 0.75;
+    display: block;
+}
+.card-versus .vs-text { font-size: 0.86rem; font-weight: 600; color: #8b0000; }
+/* 素材の縦横比のまま出す＝絵を切らない・枠に合わせない（主催決裁 2026-08-02） */
+.card-thumb {
+    background: linear-gradient(160deg, #fdfbf7 0%, #f7efe6 100%);
+    display: block;
+    position: relative;
+}
+.card-thumb.clickable { cursor: pointer; }
+.card-thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* 小説＝タイトルタイル（縦書き・折り返しあり） */
+.novel-tile {
+    width: 100%;
+    aspect-ratio: 3 / 4;   /* 小説は素材が無いのでタイル比を固定 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0.5rem;
+}
+.novel-title {
+    writing-mode: vertical-rl;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2c1810;
+    letter-spacing: 0.12em;
+    line-height: 1.9;
+    max-height: 100%;
+}
+.novel-title::before { content: '【'; }
+.novel-title::after { content: '】'; }
+/* サンプル準備中（絵・漫画で画像未確定） */
+.thumb-pending {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    color: #8b4513;
+    opacity: 0.6;
+}
+.thumb-pending .pending-en {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+}
+.thumb-pending .pending-ja { font-size: 0.85rem; font-weight: 600; }
+.card-meta {
+    padding: 0.75rem 1rem 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: auto;
+}
+.card-author { font-weight: 700; font-size: 1rem; color: #2c1810; margin-right: auto; }
+.card-genre {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #8b0000;
+    border: 1px solid rgba(178,34,34,0.45);
+    border-radius: 999px;
+    padding: 0.1rem 0.6rem;
+    flex-shrink: 0;
+}
+.card-x { font-size: 0.78rem; color: #5d4037; text-decoration: none; transition: color 0.2s; }
+.card-x:hover { color: #8b0000; }
+
+@media (max-width: 768px) {
+    .book-hero { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }
+    .book-cover { max-width: 300px; margin: 0 auto; }
+    .book-spec { display: inline-block; text-align: left; }
+    .works-section { margin: 3rem auto; }
+    .works-section h2 { font-size: 2rem; }
+}
+
+/* ── サンプル表示（2026-08-02 追加） ── */
+/* 小説タイルのSAMPLEバッジ（クリックで読める印） */
+.sample-badge {
+    position: absolute;
+    right: 0.6rem;
+    bottom: 0.6rem;
+    background: #8b0000;
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 3px;
+    pointer-events: none;
+}
+/* ライトボックス本体（単画像=中央 / 複数頁=縦積みスクロール） */
+.lightbox-body {
+    max-width: 90vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: default;
+}
+.lightbox-body.multi {
+    overflow-y: auto;
+    width: min(90vw, 760px);
+    padding: 2.5rem 0;
+}
+.lightbox-body.multi .lightbox-img {
+    max-height: none;
+    width: 100%;
+}
