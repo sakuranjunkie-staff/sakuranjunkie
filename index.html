@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>咲乱雀姫 - SUPER Heroine Time 2026</title>
-    <link rel="stylesheet" href="style.css?v=20260802g">
+    <link rel="stylesheet" href="style.css?v=20260802j">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
 
@@ -70,6 +70,7 @@
     <div id="lightbox" class="lightbox" style="display:none" onclick="closeLightbox(event)">
         <button class="lightbox-close" onclick="closeLightbox()" aria-label="閉じる">×</button>
         <img src="" alt="" id="lightbox-img" class="lightbox-img">
+        <div id="lightbox-samples" class="lightbox-samples"></div>
     </div>
 
     <section id="circle" class="circle-section">
@@ -181,9 +182,13 @@ function openLightbox(src, alt) {
     document.body.style.overflow = 'hidden';
 }
 function closeLightbox(e) {
-    if (!e || e.target !== lbImg) {
+    /* 画像そのものを押したときは閉じない（サンプルは複数枚あるので tagName で判定） */
+    if (!e || e.target.tagName !== 'IMG') {
         lb.style.display = 'none';
         document.body.style.overflow = '';
+        const box = document.getElementById('lightbox-samples');
+        if (box) { box.innerHTML = ''; box.style.display = ''; }
+        lbImg.style.display = '';
     }
 }
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
@@ -239,7 +244,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 </script>
 
 <!-- 合同誌サンプルの流れる帯（データは godoshi/data.js が正本） -->
-<script src="godoshi/data.js?v=20260802g"></script>
+<script src="godoshi/data.js?v=20260802j"></script>
 <script>
 (function () {
     const track = document.getElementById('marquee-track');
@@ -247,18 +252,36 @@ document.querySelectorAll('.nav-link').forEach(link => {
     const esc = s => String(s).replace(/[&<>"]/g, c =>
         ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-    /* 帯に流すのは全作品。絵・漫画はサンプル画像、小説はタイトルタイル */
+    /* 帯のタイルを押したら、その場でサンプルを開く（複数頁は縦積み） */
+    window.openSampleLb = function (id) {
+        const w = window.GODOSHI_DATA.works.find(x => x.id === id);
+        if (!w || !w.samples || !w.samples.length) return;
+        const box = document.getElementById('lightbox-samples');
+        document.getElementById('lightbox-img').style.display = 'none';
+        box.innerHTML = w.samples.map(s =>
+            `<img src="godoshi/${esc(s)}" alt="${esc(w.author)} サンプル" class="lightbox-img">`).join('');
+        box.style.display = 'flex';
+        document.getElementById('lightbox').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    };
+
+    /* 帯に流すのは全作品。絵・漫画はサンプル画像、小説はタイトルタイル。
+       押したらその場でサンプルを開く（別ページへは飛ばさない） */
     const items = window.GODOSHI_DATA.works.filter(w => !w.hide).map(w => {
         const isNovel = String(w.type).includes('小説');
+        let inner = '';
         if (isNovel && w.title) {
-            return `<a class="mq-item mq-novel" href="godoshi/">` +
-                   `<span class="mq-novel-title">${esc(w.title)}</span></a>`;
+            inner = `<div class="mq-novel"><span class="mq-novel-title">${esc(w.title)}</span></div>`;
+        } else if (w.samples && w.samples.length) {
+            inner = `<div class="mq-thumb">` +
+                    `<img src="godoshi/${esc(w.samples[0])}" alt="${esc(w.author)} サンプル" loading="lazy"></div>`;
+        } else {
+            return '';
         }
-        if (w.samples && w.samples.length) {
-            return `<a class="mq-item" href="godoshi/">` +
-                   `<img src="godoshi/${esc(w.samples[0])}" alt="${esc(w.author)}" loading="lazy"></a>`;
-        }
-        return '';
+        if (!(w.samples && w.samples.length)) return '';
+        return `<div class="mq-item" role="button" tabindex="0" ` +
+               `onclick="openSampleLb('${esc(w.id)}')">` +
+               `<span class="mq-author">${esc(w.author)}</span>${inner}</div>`;
     }).filter(Boolean);
     if (!items.length) return;
 

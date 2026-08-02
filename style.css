@@ -679,24 +679,47 @@ footer {
     to   { transform: translateX(-50%); }
 }
 .mq-item {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto;
+    cursor: pointer;
+    gap: 0.25rem;
+}
+.mq-author {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #5d4037;
+    line-height: 1.4;
+    height: 1.4em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+.mq-thumb {
     /* 小説の最長タイトル(13文字)が縦1列に収まる高さ＝泣き別れ防止 */
     height: 190px;
-    flex: 0 0 auto;
     border-radius: 4px;
     overflow: hidden;
     background: #fff;
     box-shadow: 0 4px 14px rgba(139, 0, 0, 0.16);
+    transition: transform 0.2s ease;
 }
-.mq-item img { height: 100%; width: auto; display: block; }
+.mq-thumb img { height: 100%; width: auto; display: block; }
+.mq-item:hover .mq-thumb, .mq-item:hover .mq-novel { transform: translateY(-3px); }
 .mq-novel {
     width: 124px;
+    height: 190px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0.45rem 0.3rem;
+    border-radius: 4px;
     background: linear-gradient(160deg, #fdfbf7 0%, #f7efe6 100%);
     border: 1px solid rgba(178, 34, 34, 0.18);
+    box-shadow: 0 4px 14px rgba(139, 0, 0, 0.16);
+    transition: transform 0.2s ease;
 }
 .mq-novel-title {
     writing-mode: vertical-rl;
@@ -708,6 +731,17 @@ footer {
     max-height: 100%;
     white-space: pre-line;
 }
+/* 帯から開くサンプル（複数頁は縦積みでスクロール） */
+.lightbox-samples {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    max-height: 92vh;
+    overflow-y: auto;
+    padding: 1rem 0;
+}
+.lightbox-samples .lightbox-img { max-height: none; max-width: min(92vw, 900px); }
 .godoshi-more {
     display: inline-block;
     padding: 0.85rem 2rem;
@@ -731,6 +765,6 @@ footer {
     .godoshi-hero { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }
     .godoshi-cover { max-width: 260px; margin: 0 auto; }
     .godoshi-title { font-size: 2.2rem; }
-    .mq-item { height: 150px; }
-    .mq-novel { width: 104px; }
+    .mq-thumb { height: 150px; }
+    .mq-novel { width: 104px; height: 150px; }
 }
