@@ -33,7 +33,8 @@ window.GODOSHI_DATA = {
       "pages": "P4-5",
       "samples": [
         "samples/w02_1.webp"
-      ]
+      ],
+      "ar": 1.805
     },
     {
       "id": "w03",
@@ -53,7 +54,8 @@ window.GODOSHI_DATA = {
       "pages": "P7",
       "samples": [
         "samples/w04_1.webp"
-      ]
+      ],
+      "ar": 1.562
     },
     {
       "id": "w05",
@@ -64,7 +66,8 @@ window.GODOSHI_DATA = {
       "pages": "P8-9",
       "samples": [
         "samples/w05_1.webp"
-      ]
+      ],
+      "ar": 1.453
     },
     {
       "id": "w06",
@@ -75,7 +78,8 @@ window.GODOSHI_DATA = {
       "pages": "P10",
       "samples": [
         "samples/w06_1.webp"
-      ]
+      ],
+      "ar": 1.527
     },
     {
       "id": "w07",
@@ -86,7 +90,8 @@ window.GODOSHI_DATA = {
       "pages": "P11",
       "samples": [
         "samples/w07_1.webp"
-      ]
+      ],
+      "ar": 1.333
     },
     {
       "id": "w08",
@@ -97,7 +102,8 @@ window.GODOSHI_DATA = {
       "pages": "P12",
       "samples": [
         "samples/w08_1.webp"
-      ]
+      ],
+      "ar": 0.509
     },
     {
       "id": "w09",
@@ -108,7 +114,8 @@ window.GODOSHI_DATA = {
       "pages": "P13",
       "samples": [
         "samples/w09_1.webp"
-      ]
+      ],
+      "ar": 1.403
     },
     {
       "id": "w10",
@@ -137,7 +144,8 @@ window.GODOSHI_DATA = {
       "pages": "P17-18",
       "samples": [
         "samples/w12_1.webp"
-      ]
+      ],
+      "ar": 2.053
     },
     {
       "id": "w13",
@@ -157,7 +165,8 @@ window.GODOSHI_DATA = {
       "pages": "P26",
       "samples": [
         "samples/w14_1.webp"
-      ]
+      ],
+      "ar": 0.68
     },
     {
       "id": "w15",
@@ -179,7 +188,8 @@ window.GODOSHI_DATA = {
         "samples/w16_1.png",
         "samples/w16_2.webp"
       ],
-      "title": "同棲してる照と菫がお酒を飲む話"
+      "title": "同棲してる照と菫がお酒を飲む話",
+      "ar": 1.054
     },
     {
       "id": "w17",
@@ -203,7 +213,8 @@ window.GODOSHI_DATA = {
         "samples/w18_2.webp",
         "samples/w18_3.webp"
       ],
-      "title": "光に棲む魚"
+      "title": "光に棲む魚",
+      "ar": 0.713
     },
     {
       "id": "w19",
@@ -225,7 +236,8 @@ window.GODOSHI_DATA = {
         "samples/w20_1.webp",
         "samples/w20_2.webp"
       ],
-      "title": "君に逢う"
+      "title": "君に逢う",
+      "ar": 0.713
     },
     {
       "id": "w21",
@@ -236,7 +248,8 @@ window.GODOSHI_DATA = {
       "pages": "P63",
       "samples": [
         "samples/w21_1.webp"
-      ]
+      ],
+      "ar": 1.247
     },
     {
       "id": "w22",
@@ -248,7 +261,8 @@ window.GODOSHI_DATA = {
       "samples": [
         "samples/w22_1.webp"
       ],
-      "title": "双姫の雀士と耕介君"
+      "title": "双姫の雀士と耕介君",
+      "ar": 0.713
     },
     {
       "id": "w23",
@@ -268,7 +282,8 @@ window.GODOSHI_DATA = {
       "pages": "P78",
       "samples": [
         "samples/w24_1.webp"
-      ]
+      ],
+      "ar": 1.504
     },
     {
       "id": "w25",
@@ -282,7 +297,8 @@ window.GODOSHI_DATA = {
         "samples/w25_2.webp",
         "samples/w25_3.webp"
       ],
-      "title": "十円の在り処"
+      "title": "十円の在り処",
+      "ar": 0.713
     },
     {
       "id": "w26",
@@ -294,7 +310,8 @@ window.GODOSHI_DATA = {
       "samples": [
         "samples/w26_1.webp"
       ],
-      "title": "それぞれの道"
+      "title": "それぞれの道",
+      "ar": 1.353
     },
     {
       "id": "w27",
@@ -305,7 +322,8 @@ window.GODOSHI_DATA = {
       "pages": "P106",
       "samples": [
         "samples/w27_1.webp"
-      ]
+      ],
+      "ar": 1.406
     },
     {
       "id": "w28",
@@ -316,7 +334,8 @@ window.GODOSHI_DATA = {
       "pages": "P107-108",
       "samples": [
         "samples/w28_1.webp"
-      ]
+      ],
+      "ar": 1.453
     },
     {
       "id": "w29",
@@ -345,7 +364,8 @@ window.GODOSHI_DATA = {
       "pages": "P119",
       "samples": [
         "samples/w31_1.webp"
-      ]
+      ],
+      "ar": 1.314
     },
     {
       "id": "w32",
@@ -358,7 +378,8 @@ window.GODOSHI_DATA = {
         "samples/w32_1.webp",
         "samples/w32_2.webp"
       ],
-      "title": "誰が為のカレーライス"
+      "title": "誰が為のカレーライス",
+      "ar": 0.713
     },
     {
       "id": "w33",
@@ -370,7 +391,8 @@ window.GODOSHI_DATA = {
       "samples": [
         "samples/w33_1.webp"
       ],
-      "title": "雀明華は収穫されたい"
+      "title": "雀明華は収穫されたい",
+      "ar": 1.339
     },
     {
       "id": "w34",
@@ -381,7 +403,8 @@ window.GODOSHI_DATA = {
       "pages": "P148-152",
       "samples": [
         "samples/w34_1.webp"
-      ]
+      ],
+      "ar": 1.802
     },
     {
       "id": "w35",
@@ -392,7 +415,8 @@ window.GODOSHI_DATA = {
       "pages": "P153-159",
       "samples": [
         "samples/w35_1.webp"
-      ]
+      ],
+      "ar": 0.611
     },
     {
       "id": "w36",
@@ -403,7 +427,8 @@ window.GODOSHI_DATA = {
       "pages": "P160",
       "samples": [
         "samples/w36_1.webp"
-      ]
+      ],
+      "ar": 1.456
     },
     {
       "id": "w37",
@@ -414,7 +439,8 @@ window.GODOSHI_DATA = {
       "pages": "P161",
       "samples": [
         "samples/w37_1.webp"
-      ]
+      ],
+      "ar": 1.456
     },
     {
       "id": "w38",
@@ -427,7 +453,8 @@ window.GODOSHI_DATA = {
         "samples/w38_1.webp",
         "samples/w38_2.webp"
       ],
-      "title": "好敵手であるために"
+      "title": "好敵手であるために",
+      "ar": 0.713
     },
     {
       "id": "w39",
@@ -440,7 +467,8 @@ window.GODOSHI_DATA = {
         "samples/w39_1.webp",
         "samples/w39_2.webp"
       ],
-      "title": "どこに行っても私のライバル"
+      "title": "どこに行っても私のライバル",
+      "ar": 0.713
     },
     {
       "id": "w40",
@@ -451,7 +479,8 @@ window.GODOSHI_DATA = {
       "pages": "P188",
       "samples": [
         "samples/w40_1.webp"
-      ]
+      ],
+      "ar": 1.55
     },
     {
       "id": "w41",
@@ -462,7 +491,8 @@ window.GODOSHI_DATA = {
       "pages": "P189-190",
       "samples": [
         "samples/w41_1.jpg"
-      ]
+      ],
+      "ar": 0.562
     },
     {
       "id": "w42",
@@ -473,7 +503,8 @@ window.GODOSHI_DATA = {
       "pages": "P191-193",
       "samples": [
         "samples/w42_1.webp"
-      ]
+      ],
+      "ar": 2.024
     },
     {
       "id": "w43",
@@ -484,7 +515,8 @@ window.GODOSHI_DATA = {
       "pages": "P194-199",
       "samples": [
         "samples/w43_1.webp"
-      ]
+      ],
+      "ar": 1.258
     },
     {
       "id": "w44",
@@ -498,7 +530,8 @@ window.GODOSHI_DATA = {
         "samples/w44_2.webp",
         "samples/w44_3.webp"
       ],
-      "title": "エピローグの無い日々へ"
+      "title": "エピローグの無い日々へ",
+      "ar": 0.713
     }
   ]
 };

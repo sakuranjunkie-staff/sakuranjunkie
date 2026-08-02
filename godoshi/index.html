@@ -85,7 +85,7 @@
     </div>
 </footer>
 
-<script src="data.js?v=20260802"></script>
+<script src="data.js?v=20260802b"></script>
 <script>
 /* 作品グリッド描画（データ正本=data.js） */
 function esc(s) {
@@ -130,8 +130,15 @@ function cardHtml(w) {
             <span class="card-genre">${genre}</span>${xLink}</div>
     </article>`;
 }
-document.getElementById('works-grid').innerHTML =
-    window.GODOSHI_DATA.works.map(cardHtml).join('');
+/* 縦横比の近いものを固めて並べる（主催決裁 2026-08-02）。
+   小説のタイトルタイルと準備中は3:4固定なので0.75として扱う */
+function tileAr(w) {
+    if (genreOf(w.type) === '小説' && w.title) return 0.75;
+    if (!(w.samples && w.samples.length)) return 0.75;
+    return w.ar || 0.75;
+}
+const ordered = [...window.GODOSHI_DATA.works].sort((a, b) => tileAr(b) - tileAr(a));
+document.getElementById('works-grid').innerHTML = ordered.map(cardHtml).join('');
 
 /* ライトボックス（単画像＝表紙、複数頁＝サンプル） */
 const lb = document.getElementById('lightbox');
