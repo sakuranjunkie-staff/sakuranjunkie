@@ -424,7 +424,7 @@ window.GODOSHI_DATA = {
       "id": "w36",
       "author": "さいぱに",
       "x": "@saisaipanipani",
-      "rival": "vs 準決勝中堅戦",
+      "rival": "vs 中堅戦",
       "type": "モノクロイラスト",
       "pages": "P160",
       "samples": [
