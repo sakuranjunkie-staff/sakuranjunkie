@@ -94,16 +94,19 @@
 .card-versus {
     padding: 0.7rem 1rem 0.55rem;
     border-bottom: 1px solid rgba(178,34,34,0.12);
+    text-align: center;   /* 対立軸は中央揃え（主催指示 2026-08-02） */
 }
-.card-versus .vs-label {
-    font-family: 'Cinzel', serif;
-    font-size: 0.58rem;
-    color: #8b4513;
-    letter-spacing: 0.18em;
-    opacity: 0.75;
-    display: block;
+/* 2行になる対立軸（2試合分）に高さを合わせ、短いものは上下中央に置く＝カードの高さを揃える */
+.card-versus .vs-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.8em;
+    line-height: 1.4;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: #8b0000;
 }
-.card-versus .vs-text { font-size: 0.86rem; font-weight: 600; color: #8b0000; }
 /* 素材の縦横比のまま出す＝絵を切らない・枠に合わせない（主催決裁 2026-08-02） */
 .card-thumb {
     background: linear-gradient(160deg, #fdfbf7 0%, #f7efe6 100%);
@@ -154,15 +157,21 @@
     letter-spacing: 0.2em;
 }
 .thumb-pending .pending-ja { font-size: 0.85rem; font-weight: 600; }
+/* 常に2行（上=作者名＋分類／下=Xリンク）＝名前の長さでカードの高さが変わらない */
 .card-meta {
     padding: 0.75rem 1rem 0.9rem;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.45rem;
+    flex-direction: column;
+    gap: 0.3rem;
     margin-top: auto;
 }
-.card-author { font-weight: 700; font-size: 1rem; color: #2c1810; margin-right: auto; }
+.card-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+.card-author { font-weight: 700; font-size: 1rem; color: #2c1810; }
 .card-genre {
     font-size: 0.7rem;
     font-weight: 600;
@@ -172,7 +181,14 @@
     padding: 0.1rem 0.6rem;
     flex-shrink: 0;
 }
-.card-x { font-size: 0.78rem; color: #5d4037; text-decoration: none; transition: color 0.2s; }
+.card-x {
+    font-size: 0.78rem;
+    color: #5d4037;
+    text-decoration: none;
+    transition: color 0.2s;
+    line-height: 1.5;
+    min-height: 1.5em;   /* Xリンクが無い作者(權兵衞)でも行を確保＝高さを揃える */
+}
 .card-x:hover { color: #8b0000; }
 
 @media (max-width: 768px) {

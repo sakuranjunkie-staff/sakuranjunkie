@@ -190,7 +190,7 @@ window.GODOSHI_DATA = {
       "samples": [
         "samples/w16_1.webp"
       ],
-      "title": "同棲してる照と菫が\nXXXXXX話",
+      "title": "同棲してる照と菫が\nＸＸＸＸＸＸ話",
       "ar": 1.339
     },
     {
