@@ -127,15 +127,15 @@
 }
 .novel-title {
     writing-mode: vertical-rl;
-    font-size: 1.2rem;
+    /* 最小カード幅(235px)でも13文字が1列に収まる大きさ＝泣き別れ防止 */
+    font-size: 1.1rem;
     font-weight: 700;
     color: #2c1810;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     line-height: 1.9;
     max-height: 100%;
+    white-space: pre-line;   /* タイトル内の改行を活かす（伏せ字の行分け等） */
 }
-.novel-title::before { content: '【'; }
-.novel-title::after { content: '】'; }
 /* サンプル準備中（絵・漫画で画像未確定） */
 .thumb-pending {
     width: 100%;

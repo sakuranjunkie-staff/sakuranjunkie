@@ -680,7 +680,8 @@ footer {
 }
 .mq-item {
     display: block;
-    height: 150px;
+    /* 小説の最長タイトル(13文字)が縦1列に収まる高さ＝泣き別れ防止 */
+    height: 190px;
     flex: 0 0 auto;
     border-radius: 4px;
     overflow: hidden;
@@ -689,22 +690,23 @@ footer {
 }
 .mq-item img { height: 100%; width: auto; display: block; }
 .mq-novel {
-    width: 112px;
+    width: 124px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.6rem 0.3rem;
+    padding: 0.45rem 0.3rem;
     background: linear-gradient(160deg, #fdfbf7 0%, #f7efe6 100%);
     border: 1px solid rgba(178, 34, 34, 0.18);
 }
 .mq-novel-title {
     writing-mode: vertical-rl;
-    font-size: 0.84rem;
+    font-size: 0.77rem;
     font-weight: 700;
     color: #2c1810;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     line-height: 1.7;
     max-height: 100%;
+    white-space: pre-line;
 }
 .godoshi-more {
     display: inline-block;
@@ -729,6 +731,6 @@ footer {
     .godoshi-hero { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }
     .godoshi-cover { max-width: 260px; margin: 0 auto; }
     .godoshi-title { font-size: 2.2rem; }
-    .mq-item { height: 116px; }
-    .mq-novel { width: 88px; }
+    .mq-item { height: 150px; }
+    .mq-novel { width: 104px; }
 }

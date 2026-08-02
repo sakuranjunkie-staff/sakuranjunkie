@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>咲乱雀姫 - SUPER Heroine Time 2026</title>
-    <link rel="stylesheet" href="style.css?v=20260802">
+    <link rel="stylesheet" href="style.css?v=20260802g">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
 
@@ -239,7 +239,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 </script>
 
 <!-- 合同誌サンプルの流れる帯（データは godoshi/data.js が正本） -->
-<script src="godoshi/data.js?v=20260802"></script>
+<script src="godoshi/data.js?v=20260802g"></script>
 <script>
 (function () {
     const track = document.getElementById('marquee-track');
@@ -248,7 +248,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
         ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
     /* 帯に流すのは全作品。絵・漫画はサンプル画像、小説はタイトルタイル */
-    const items = window.GODOSHI_DATA.works.map(w => {
+    const items = window.GODOSHI_DATA.works.filter(w => !w.hide).map(w => {
         const isNovel = String(w.type).includes('小説');
         if (isNovel && w.title) {
             return `<a class="mq-item mq-novel" href="godoshi/">` +

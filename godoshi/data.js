@@ -22,7 +22,8 @@ window.GODOSHI_DATA = {
       "rival": "江口セーラ vs 愛宕洋榎",
       "type": "カラーイラスト",
       "pages": "P3",
-      "samples": []
+      "samples": [],
+      "hide": true
     },
     {
       "id": "w02",
@@ -43,7 +44,8 @@ window.GODOSHI_DATA = {
       "rival": "高鴨穏乃 vs 大星淡",
       "type": "カラーイラスト",
       "pages": "P6",
-      "samples": []
+      "samples": [],
+      "hide": true
     },
     {
       "id": "w04",
@@ -124,7 +126,8 @@ window.GODOSHI_DATA = {
       "rival": "園城寺怜 vs 清水谷竜華",
       "type": "カラーイラスト",
       "pages": "P14-15",
-      "samples": []
+      "samples": [],
+      "hide": true
     },
     {
       "id": "w11",
@@ -185,11 +188,10 @@ window.GODOSHI_DATA = {
       "type": "小説",
       "pages": "P28-29",
       "samples": [
-        "samples/w16_1.png",
-        "samples/w16_2.webp"
+        "samples/w16_1.webp"
       ],
-      "title": "同棲してる照と菫がお酒を飲む話",
-      "ar": 1.054
+      "title": "同棲してる照と菫が\nXXXXXX話",
+      "ar": 1.339
     },
     {
       "id": "w17",
