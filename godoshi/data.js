@@ -225,7 +225,10 @@ window.GODOSHI_DATA = {
       "rival": "赤土晴絵 vs 小鍛治健夜",
       "type": "モノクロ漫画",
       "pages": "P47-54",
-      "samples": []
+      "samples": [
+        "samples/w19_1.webp"
+      ],
+      "ar": 0.713
     },
     {
       "id": "w20",
