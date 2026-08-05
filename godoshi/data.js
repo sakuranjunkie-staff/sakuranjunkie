@@ -136,7 +136,10 @@ window.GODOSHI_DATA = {
       "rival": "宮永咲 vs 宮永照",
       "type": "カラーイラスト",
       "pages": "P16",
-      "samples": []
+      "samples": [
+        "samples/w11_1.webp"
+      ],
+      "ar": 0.908
     },
     {
       "id": "w12",
