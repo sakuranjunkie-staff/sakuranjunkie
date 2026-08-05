@@ -266,8 +266,9 @@ document.querySelectorAll('.nav-link').forEach(link => {
     };
 
     /* 帯に流すのは全作品。絵・漫画はサンプル画像、小説はタイトルタイル。
-       押したらその場でサンプルを開く（別ページへは飛ばさない） */
-    const items = window.GODOSHI_DATA.works.filter(w => !w.hide).map(w => {
+       押したらその場でサンプルを開く（別ページへは飛ばさない）。
+       目次タイル(w00*)はグリッド先頭固定の専用素材＝帯には流さない */
+    const items = window.GODOSHI_DATA.works.filter(w => !w.hide && !w.id.startsWith('w00')).map(w => {
         const isNovel = String(w.type).includes('小説');
         let inner = '';
         if (isNovel && w.title) {
