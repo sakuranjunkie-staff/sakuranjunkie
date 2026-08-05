@@ -184,7 +184,10 @@ window.GODOSHI_DATA = {
       "rival": "宮永咲 vs 大星淡",
       "type": "モノクロ漫画",
       "pages": "P19-25",
-      "samples": []
+      "samples": [
+        "samples/w13_1.webp"
+      ],
+      "ar": 0.713
     },
     {
       "id": "w14",
@@ -376,7 +379,10 @@ window.GODOSHI_DATA = {
       "rival": "藤白七実 vs 城阪花織",
       "type": "モノクロ漫画",
       "pages": "P109-110",
-      "samples": []
+      "samples": [
+        "samples/w29_1.webp"
+      ],
+      "ar": 1.742
     },
     {
       "id": "w30",
