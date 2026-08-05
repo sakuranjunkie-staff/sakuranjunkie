@@ -355,7 +355,10 @@ window.GODOSHI_DATA = {
       "rival": "岩館揺杏 vs 愛宕洋榎",
       "type": "モノクロ漫画",
       "pages": "P111-118",
-      "samples": []
+      "samples": [
+        "samples/w30_1.webp"
+      ],
+      "ar": 0.714
     },
     {
       "id": "w31",
