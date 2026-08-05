@@ -94,6 +94,7 @@ function esc(s) {
     })[c]);
 }
 function genreOf(type) {
+    if (type.includes('目次')) return '目次';
     if (type.includes('小説')) return '小説';
     if (type.includes('漫画')) return '漫画';
     return 'イラスト';
@@ -140,9 +141,11 @@ function tileAr(w) {
     return w.ar || 0.75;
 }
 /* hide=true は一覧に出さない（サンプルを出さないと決めた2作目など） */
-const ordered = window.GODOSHI_DATA.works
-    .filter(w => !w.hide)
-    .sort((a, b) => tileAr(b) - tileAr(a));
+/* 目次タイル(w00*)は並べ替えの外＝常に左上先頭（主催指示 2026-08-05） */
+const visible = window.GODOSHI_DATA.works.filter(w => !w.hide);
+const ordered = visible.filter(w => w.id.startsWith('w00'))
+    .concat(visible.filter(w => !w.id.startsWith('w00'))
+        .sort((a, b) => tileAr(b) - tileAr(a)));
 document.getElementById('works-grid').innerHTML = ordered.map(cardHtml).join('');
 
 /* ライトボックス（単画像＝表紙、複数頁＝サンプル） */

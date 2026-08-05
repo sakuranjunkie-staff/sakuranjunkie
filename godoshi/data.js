@@ -16,6 +16,30 @@ window.GODOSHI_DATA = {
   "cover": "cover.webp",
   "works": [
     {
+      "id": "w00a",
+      "author": "JUNKIE×JUNKIE",
+      "x": "",
+      "rival": "目次（前半）",
+      "type": "目次",
+      "pages": "P1",
+      "samples": [
+        "samples/w00a_1.webp"
+      ],
+      "ar": 0.713
+    },
+    {
+      "id": "w00b",
+      "author": "JUNKIE×JUNKIE",
+      "x": "",
+      "rival": "目次（後半）",
+      "type": "目次",
+      "pages": "P2",
+      "samples": [
+        "samples/w00b_1.webp"
+      ],
+      "ar": 0.713
+    },
+    {
       "id": "w01",
       "author": "ふゆんた",
       "x": "@fuyunta27",
