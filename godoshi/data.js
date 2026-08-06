@@ -211,7 +211,7 @@ window.GODOSHI_DATA = {
       "samples": [
         "samples/w15_1.webp"
       ],
-      "ar": 0.323
+      "ar": 0.509
     },
     {
       "id": "w16",
