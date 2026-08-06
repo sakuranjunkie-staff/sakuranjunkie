@@ -208,7 +208,10 @@ window.GODOSHI_DATA = {
       "rival": "稲村杏果 vs 楫野結衣",
       "type": "モノクロイラスト",
       "pages": "P27",
-      "samples": []
+      "samples": [
+        "samples/w15_1.webp"
+      ],
+      "ar": 0.323
     },
     {
       "id": "w16",
