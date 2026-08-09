@@ -309,7 +309,10 @@ window.GODOSHI_DATA = {
       "rival": "東横桃子 vs 加治木ゆみの周りの人々",
       "type": "モノクロ漫画",
       "pages": "P74-77",
-      "samples": []
+      "samples": [
+        "samples/w23_1.webp"
+      ],
+      "ar": 0.713
     },
     {
       "id": "w24",
