@@ -233,8 +233,12 @@ window.GODOSHI_DATA = {
       "rival": "池田華菜 vs 天江衣",
       "type": "小説",
       "pages": "P30-37",
-      "samples": [],
-      "title": "スタートライン"
+      "samples": [
+        "samples/w17_1.webp",
+        "samples/w17_2.webp"
+      ],
+      "title": "スタートライン",
+      "ar": 0.713
     },
     {
       "id": "w18",
