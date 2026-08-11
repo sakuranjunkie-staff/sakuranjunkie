@@ -199,6 +199,26 @@
     .works-section h2 { font-size: 2rem; }
 }
 
+/* ── BOOTH通販ボタン（2026-08-11 追加） ── */
+.booth-btn {
+    display: inline-block;
+    margin-top: 1.2rem;
+    padding: 0.7rem 2rem;
+    background: linear-gradient(135deg, #b22222, #8b0000);
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(139,0,0,0.3);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.booth-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(139,0,0,0.4);
+}
+.booth-bottom { text-align: center; margin-top: 2.5rem; }
+
 /* ── サンプル表示（2026-08-02 追加） ── */
 /* 小説タイルのSAMPLEバッジ（クリックで読める印） */
 .sample-badge {
