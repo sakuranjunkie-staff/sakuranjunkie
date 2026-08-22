@@ -18,6 +18,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="咲-Saki-ライバル合同誌『JUNKIE×JUNKIE』">
     <meta name="twitter:description" content="A5判230ページ・寄稿者40名。咲乱雀姫01にて頒布。">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="4aa8bf88-8187-4a4e-b798-2bb1ca6fe0af"></script>
+    <script src="../sjtrack.js"></script>
 </head>
 <body>
 
@@ -58,7 +60,7 @@
                 <li><strong>頒布日</strong>：2026年9月22日（火・祝）「咲乱雀姫01」</li>
                 <li><strong>会場</strong>：大田区産業プラザPiO 大展示ホール</li>
             </ul>
-            <a class="booth-btn" href="https://sakuranjyanki.booth.pm/" target="_blank" rel="noopener">通販はこちら（BOOTH）</a>
+            <a class="booth-btn" data-umami-event="booth_click" href="https://sakuranjyanki.booth.pm/" target="_blank" rel="noopener">通販はこちら（BOOTH）</a>
         </div>
     </div>
 
@@ -67,7 +69,7 @@
         <p class="works-desc">寄稿者40名</p>
         <div class="works-grid" id="works-grid"></div>
         <div class="booth-bottom">
-            <a class="booth-btn" href="https://sakuranjyanki.booth.pm/" target="_blank" rel="noopener">通販はこちら（BOOTH）</a>
+            <a class="booth-btn" data-umami-event="booth_click" href="https://sakuranjyanki.booth.pm/" target="_blank" rel="noopener">通販はこちら（BOOTH）</a>
         </div>
     </section>
 
@@ -152,8 +154,11 @@ const ordered = visible.filter(w => w.id.startsWith('w00'))
         .sort((a, b) => tileAr(b) - tileAr(a)));
 document.getElementById('works-grid').innerHTML = ordered.map(cardHtml).join('');
 
+/* 計測：合同誌ページ閲覧（新規/再訪の印つき） */
+if (window.sjTrack) sjTrack('godoshi_view');
+
 /* ライトボックス（単画像＝表紙、複数頁＝サンプル） */
-const lb = document.getElementById('lightbox');
+const lb =document.getElementById('lightbox');
 const lbBody = document.getElementById('lightbox-body');
 function showLb(html, multi) {
     lbBody.innerHTML = html;
@@ -167,6 +172,7 @@ function openLightbox(src, alt) {
 function openSamples(id) {
     const w = window.GODOSHI_DATA.works.find(x => x.id === id);
     if (!w || !w.samples || !w.samples.length) return;
+    if (window.sjTrack) sjTrack('sample_open', { id: w.id, author: w.author });
     showLb(w.samples.map((s, i) =>
         `<img src="${esc(s)}" alt="${esc(w.author)} サンプル ${i + 1}" class="lightbox-img" loading="lazy">`
     ).join(''), w.samples.length > 1);

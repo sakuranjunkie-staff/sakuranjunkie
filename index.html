@@ -18,6 +18,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="咲-Saki-オンリーイベント　咲乱雀姫01">
     <meta name="twitter:description" content="2026年9月22日（火・祝）大田区産業プラザPiO 大展示ホール開催。">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="4aa8bf88-8187-4a4e-b798-2bb1ca6fe0af"></script>
+    <script src="sjtrack.js"></script>
     <meta name="twitter:image" content="https://sakuranjyanki.jp/main_visual_original.webp">
 </head>
 <body>
@@ -93,7 +95,7 @@
     <section id="godoshi" class="godoshi-section">
         <h2>合同誌</h2>
         <div class="godoshi-hero">
-            <a href="godoshi/" class="godoshi-cover">
+            <a href="godoshi/" data-umami-event="goto_godoshi" class="godoshi-cover">
                 <img src="godoshi/cover.webp" alt="合同誌 JUNKIE×JUNKIE 表紙">
             </a>
             <div class="godoshi-lead">
@@ -106,7 +108,7 @@
         <div class="godoshi-marquee" id="godoshi-marquee">
             <div class="marquee-track" id="marquee-track"></div>
         </div>
-        <a href="godoshi/" class="godoshi-more">全サンプルについて詳しくはこちら</a>
+        <a href="godoshi/" data-umami-event="goto_godoshi" class="godoshi-more">全サンプルについて詳しくはこちら</a>
     </section>
 
     <section id="info" class="venue-section">
@@ -256,6 +258,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
     window.openSampleLb = function (id) {
         const w = window.GODOSHI_DATA.works.find(x => x.id === id);
         if (!w || !w.samples || !w.samples.length) return;
+        if (window.sjTrack) sjTrack('sample_open', { id: w.id, author: w.author, from: 'top' });
         const box = document.getElementById('lightbox-samples');
         document.getElementById('lightbox-img').style.display = 'none';
         box.innerHTML = w.samples.map(s =>
