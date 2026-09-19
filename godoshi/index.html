@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>合同誌 JUNKIE×JUNKIE - 咲乱雀姫</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../events.css?v=20260919b">
     <link rel="stylesheet" href="godoshi.css?v=20260802i">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
@@ -27,23 +28,15 @@
     <div class="nav-inner">
         <div class="nav-brand-center">
             <span class="nav-label">咲-Saki-シリーズオンリーイベント</span>
-            <a href="../index.html" class="nav-title">咲乱雀姫 / 咲花繚乱</a>
+            <a href="../" class="nav-title">咲乱雀姫 / 咲花繚乱</a>
             <span class="nav-subtitle-de">Die derangierten Süchtigen</span>
         </div>
-        <ul class="nav-menu" id="nav-menu">
-            <li><a href="../index.html#circle" class="nav-link">サークル参加</a></li>
-            <li><a href="../index.html#general" class="nav-link">一般参加</a></li>
-            <li><a href="#works" class="nav-link">合同誌</a></li>
-            <li><a href="../index.html#info" class="nav-link">会場・アクセス</a></li>
-        </ul>
-        <div class="nav-countdown" aria-label="開催まであと何日">
-            <a href="https://www.puniket.com/sht/" target="_blank" rel="noopener" class="nav-countdown-meta">開催日 2026.9.22 &nbsp;|&nbsp; 大田区産業プラザPiO</a>
-            <span class="nav-countdown-days">開催日まで残り&nbsp;<span id="countdown-days">--</span><span class="nav-countdown-unit">日</span></span>
-        </div>
-        <button class="nav-toggle" id="nav-toggle" aria-label="メニューを開く">
-            <span></span><span></span><span></span>
-        </button>
     </div>
+    <!-- イベント切替タブ（東京／大阪・合同誌ページではどちらも非アクティブ） -->
+    <nav class="event-switch" aria-label="イベント切替">
+        <a href="../sakuran/" class="es-tab" data-event="sakuran"><span class="es-name">咲乱雀姫</span><span class="es-sub">東京開催 2027年2月28日（日）</span></a>
+        <a href="../ryoran/" class="es-tab" data-event="ryoran"><span class="es-name">咲花繚乱</span><span class="es-sub">大阪開催 2027年1月17日（日）</span></a>
+    </nav>
 </nav>
 
 <main>
@@ -184,25 +177,10 @@ function closeLightbox(e) {
     }
 }
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-
-/* カウントダウン */
-(function() {
-    var EVENT = new Date('2026-09-22T00:00:00+09:00');
-    var el = document.getElementById('countdown-days');
-    if (el) {
-        var diff = EVENT - new Date();
-        el.textContent = diff > 0 ? Math.ceil(diff / 86400000) : 0;
-    }
-})();
-
-/* ナビ ハンバーガー */
-const toggle = document.getElementById('nav-toggle');
-const menu = document.getElementById('nav-menu');
-toggle.addEventListener('click', () => {
-    menu.classList.toggle('open');
-    toggle.classList.toggle('open');
-});
 </script>
+
+<!-- イベント記憶の共通処理 -->
+<script src="../site.js"></script>
 
 </body>
 </html>
