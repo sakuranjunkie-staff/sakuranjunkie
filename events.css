@@ -200,47 +200,6 @@
     padding: 0.7rem 1.6rem;
     font-size: 0.95rem;
 }
-/* 無効ボタン（フォーム準備中など） */
-.btn-disabled,
-.btn-disabled:hover {
-    background: #bdbdbd;
-    color: #fff;
-    box-shadow: none;
-    transform: none;
-    cursor: not-allowed;
-    pointer-events: auto;
-}
-
-/* ── 大阪ページ：参加サークル一覧（空なら案内文） ── */
-.circle-list {
-    list-style: none;
-    max-width: 720px;
-    margin: 1rem auto 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 0.8rem;
-    text-align: left;
-}
-.circle-list li {
-    background: rgba(255,255,255,0.9);
-    border: 1px solid var(--ev-line);
-    border-radius: 10px;
-    padding: 0.8rem 1rem;
-}
-.circle-list:empty {
-    display: block;
-    text-align: center;
-}
-.circle-list:empty::after {
-    content: 'まだ掲載はありません';
-    display: block;
-    color: var(--ev-brown-light);
-    font-size: 0.95rem;
-    padding: 1.6rem 1rem;
-    border: 2px dashed rgba(178,34,34,0.3);
-    border-radius: 12px;
-    background: rgba(255,255,255,0.6);
-}
 
 /* ── 大阪ページ：フッター各種リンク（style.css の .official-link と同意匠） ── */
 .aoboo-link, .comitre-link {
