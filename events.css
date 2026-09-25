@@ -196,7 +196,9 @@
 }
 .step-body p strong { color: var(--ev-red); }
 .step-body .general-btn {
-    margin-top: 0;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
     padding: 0.7rem 1.6rem;
     font-size: 0.95rem;
 }
@@ -229,5 +231,5 @@
     .portal-links { flex-direction: column; }
     .portal-links .general-btn { min-width: 0; }
     .placeholder-text { font-size: 0.9rem; }
-    .step-body .general-btn { display: block; text-align: center; }
+    .step-body .general-btn { width: auto; text-align: center; }
 }
