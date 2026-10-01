@@ -59,6 +59,32 @@
     border-color: var(--ev-red);
 }
 
+/* ── ページ内セクションメニュー（切替タブの直下・sticky nav 内） ── */
+.section-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 0.4rem;
+    padding: 0.35rem 1rem 0.55rem;
+    background: rgba(255,255,255,0.97);
+}
+.sn-link {
+    display: inline-block;
+    padding: 0.25rem 0.9rem;
+    color: var(--ev-red);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s, background 0.2s;
+}
+.sn-link:hover { border-bottom-color: var(--ev-red); background: rgba(178,34,34,0.05); }
+/* 固定ヘッダーの高さ分だけ飛び先をずらす（高さは site.js が --nav-h に入れる） */
+section[id] { scroll-margin-top: calc(var(--nav-h, 200px) + 12px); }
+html { scroll-behavior: smooth; }
+
 /* ── 総合トップ（振り分け専用）：移動案内と2リンク ── */
 .portal-section {
     max-width: 800px;
@@ -203,6 +229,10 @@
     font-size: 0.95rem;
 }
 
+/* ── 大阪ページ：申込カード内のサークル参加バナー ── */
+.step-body .circle-banner-link { display: block; margin: 0 auto; }
+.step-body .credit-text { font-size: 0.72rem; margin-bottom: 0; }
+
 /* ── 大阪ページ：フッター各種リンク（style.css の .official-link と同意匠） ── */
 .aoboo-link, .comitre-link {
     color: #8b4513;
@@ -221,6 +251,8 @@
     .es-tab { flex: 1 1 0; padding: 0.4rem 0.5rem; }
     .es-name { font-size: 0.95rem; }
     .es-sub { font-size: 0.68rem; }
+    .section-nav { gap: 0 0.1rem; padding: 0.25rem 0.4rem 0.45rem; }
+    .sn-link { font-size: 0.82rem; padding: 0.2rem 0.55rem; letter-spacing: 0.02em; }
     .aoboo-link, .comitre-link { font-size: 1rem; display: block; margin: 0.5rem 0; }
     .about-dl { grid-template-columns: 1fr; gap: 0.2rem 0; padding: 1.2rem 1.4rem; }
     .about-dl dt { margin-top: 0.6rem; }

@@ -19,6 +19,16 @@
         a.addEventListener('click', function () { remember(a.dataset.event); });
     });
 
+    /* 固定ヘッダーの高さを --nav-h に入れる（ページ内メニューの飛び先をヘッダー分ずらすため） */
+    var nav = document.getElementById('site-nav');
+    function setNavHeight() {
+        if (!nav) return;
+        document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px');
+    }
+    setNavHeight();
+    window.addEventListener('resize', setNavHeight);
+    window.addEventListener('load', setNavHeight);
+
     /* 総合トップ用：開催日順のイベント一覧 */
     window.SJ_EVENTS = [
         { key: 'ryoran',  date: '2027-01-17', path: 'ryoran/' },

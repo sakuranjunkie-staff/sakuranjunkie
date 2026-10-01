@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>咲花繚乱01 - こみっくトレジャー49内 咲-Saki-プチオンリー</title>
     <link rel="stylesheet" href="../style.css?v=20260802j">
-    <link rel="stylesheet" href="../events.css?v=20260925">
+    <link rel="stylesheet" href="../events.css?v=20261001">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
 
@@ -55,6 +55,14 @@
         <a href="../sakuran/" class="es-tab" data-event="sakuran"><span class="es-name">咲乱雀姫</span><span class="es-sub">東京開催 2027年2月28日（日）</span></a>
         <a href="../ryoran/" class="es-tab is-active" data-event="ryoran" aria-current="page"><span class="es-name">咲花繚乱</span><span class="es-sub">大阪開催 2027年1月17日（日）</span></a>
     </nav>
+    <!-- ページ内セクションメニュー -->
+    <nav class="section-nav" aria-label="ページ内メニュー">
+        <a href="#about" class="sn-link">開催概要</a>
+        <a href="#circle" class="sn-link">サークル参加</a>
+        <a href="#survey" class="sn-link">サークル参加者アンケート</a>
+        <a href="#general" class="sn-link">一般参加</a>
+        <a href="#info" class="sn-link">会場・アクセス</a>
+    </nav>
 </nav>
 
 <main>
@@ -90,7 +98,11 @@
                 <div class="step-body">
                     <h3 class="step-title">こみっくトレジャー49へサークル申込</h3>
                     <p>青ブーブー通信社の申込ページから、通常のサークル参加申込を行ってください。<strong>申込時の備考欄に「プチオンリー　咲花繚乱 連結希望」とご記入ください</strong>（連結配置の目印になります）。<br>〆切 11月27日（金）／b2オンラインの内容変更期限 11月19日（木）</p>
-                    <a href="https://aoboo.jp/p/entry" target="_blank" rel="noopener" class="general-btn">こみっくトレジャー49 サークル申込へ</a>
+                    <p>サークル参加申し込みは、以下のバナーリンクから行ってください</p>
+                    <a href="https://aoboo.jp/p/entry" target="_blank" rel="noopener" class="circle-banner-link" onclick="openLightbox('../docs/images/ryoran_banner_full.webp','咲花繚乱 バナー（原画）')">
+                        <img src="../ryoran_banner.webp" alt="咲花繚乱 サークル参加申し込みはこちら" class="circle-banner-img">
+                    </a>
+                    <p class="credit-text"><a href="https://x.com/momodaje_726" target="_blank" rel="noopener">Illustration by ももよ</a></p>
                 </div>
             </li>
         </ol>
@@ -172,7 +184,7 @@
                 こみっくトレジャー49
             </a>
         </p>
-        <p class="copyright">© 2026 咲乱雀姫/咲花繚乱 実行委員会. All rights reserved.</p>
+        <p class="copyright">© 2026 咲乱雀姫/咲花繚乱 実行委員会. All rights reserved.<br>サークル参加バナー © ももよ</p>
     </div>
 </footer>
 
@@ -222,7 +234,7 @@ function copyLink() {
 </script>
 
 <!-- イベント記憶の共通処理 -->
-<script src="../site.js"></script>
+<script src="../site.js?v=20261001"></script>
 
 </body>
 </html>
