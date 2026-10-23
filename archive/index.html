@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アーカイブ - 咲乱雀姫 / 咲花繚乱</title>
+    <link rel="stylesheet" href="../style.css?v=20260802j">
+    <link rel="stylesheet" href="../events.css?v=20261023">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- OGP / SNSシェア用メタ情報 -->
+    <meta property="og:title" content="アーカイブ - 咲乱雀姫 / 咲花繚乱">
+    <meta property="og:description" content="咲-Saki-シリーズオンリーイベント これまでの開催の告知ビジュアル。">
+    <meta property="og:image" content="https://sakuranjyanki.jp/archive/sakuran01_full.webp">
+    <meta property="og:url" content="https://sakuranjyanki.jp/archive/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="咲乱雀姫">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="アーカイブ - 咲乱雀姫 / 咲花繚乱">
+    <meta name="twitter:description" content="咲-Saki-シリーズオンリーイベント これまでの開催の告知ビジュアル。">
+    <meta name="twitter:image" content="https://sakuranjyanki.jp/archive/sakuran01_full.webp">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="4aa8bf88-8187-4a4e-b798-2bb1ca6fe0af"></script>
+    <script src="../sjtrack.js"></script>
+</head>
+<body>
+
+<nav class="site-nav" id="site-nav">
+    <div class="nav-inner">
+        <div class="nav-brand-center">
+            <span class="nav-label">咲-Saki-シリーズオンリーイベント</span>
+            <a href="../" class="nav-title">咲乱雀姫 / 咲花繚乱</a>
+            <span class="nav-subtitle-de">Die derangierten Süchtigen</span>
+        </div>
+    </div>
+    <!-- イベント切替タブ（東京／大阪・アーカイブページではどちらも非アクティブ） -->
+    <nav class="event-switch" aria-label="イベント切替">
+        <a href="../sakuran/" class="es-tab" data-event="sakuran"><span class="es-name">咲乱雀姫</span><span class="es-sub">東京開催 2027年2月28日（日）</span></a>
+        <a href="../ryoran/" class="es-tab" data-event="ryoran"><span class="es-name">咲花繚乱</span><span class="es-sub">大阪開催 2027年1月17日（日）</span></a>
+    </nav>
+</nav>
+
+<main>
+    <section id="archive" class="archive-section">
+        <h2>ARCHIVE</h2>
+
+        <!-- 咲乱雀姫01（2026-09-22）。正面＝文字なし原画、クリック＝ロゴ・開催情報入り版 -->
+        <article class="archive-entry">
+            <div class="hero-image">
+                <img src="sakuran01.webp" alt="咲乱雀姫01 メインビジュアル" class="hero-img" onclick="openLightbox('sakuran01_full.webp','咲乱雀姫01 告知ビジュアル（ロゴ・開催情報入り）')">
+                <p class="credit-text"><a href="https://x.com/haruno_rai" target="_blank" rel="noopener">Illustration by ゆんこ</a></p>
+            </div>
+            <h3 class="archive-title">咲乱雀姫01</h3>
+            <p class="archive-meta">2026年9月22日（火・祝）<br>大田区産業プラザPiO 大展示ホール</p>
+            <p class="archive-link"><a href="../godoshi/">合同誌「JUNKIE×JUNKIE」サンプルページ</a></p>
+        </article>
+    </section>
+
+    <div class="back-bottom"><a href="../sakuran/" class="back-btn">← 戻る</a></div>
+
+    <!-- ライトボックス -->
+    <div id="lightbox" class="lightbox" style="display:none" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="閉じる">×</button>
+        <img src="" alt="" id="lightbox-img" class="lightbox-img">
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-label">お問い合わせ</div>
+        <p class="footer-contact">
+            イベントに関するお問い合わせは公式Xまでお願いします。<br>
+            <a href="https://x.com/Tli6UYdZ4P68591" target="_blank" rel="noopener" class="contact-link">咲乱雀姫/咲花繚乱 実行委員会（X）</a>
+        </p>
+        <p class="copyright">© 2026 咲乱雀姫/咲花繚乱 実行委員会. All rights reserved.<br>メインビジュアル © ゆんこ</p>
+    </div>
+</footer>
+
+<script>
+/* ライトボックス（単画像） */
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lightbox-img');
+function openLightbox(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    lb.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e) {
+    if (!e || e.target.tagName !== 'IMG') {
+        lb.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+}
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+/* 計測：アーカイブページ閲覧 */
+if (window.sjTrack) sjTrack('archive_view');
+</script>
+
+<!-- イベント記憶の共通処理 -->
+<script src="../site.js?v=20261001"></script>
+
+</body>
+</html>

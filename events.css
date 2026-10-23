@@ -265,3 +265,74 @@ html { scroll-behavior: smooth; }
     .placeholder-text { font-size: 0.9rem; }
     .step-body .general-btn { width: auto; text-align: center; }
 }
+
+/* ── アーカイブページ（/archive/・2026-10-23 追加） ── */
+.archive-section {
+    max-width: 800px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+    text-align: center;
+}
+.archive-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    background: linear-gradient(135deg, var(--ev-red-light), var(--ev-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.archive-entry { margin-top: 0.5rem; }
+.archive-entry .hero-image { margin: 1rem auto 0; padding: 0; }
+.archive-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ev-red);
+    letter-spacing: 0.08em;
+    margin: 1.2rem 0 0.3rem;
+}
+.archive-meta {
+    font-size: 1.05rem;
+    color: var(--ev-brown);
+    line-height: 1.7;
+}
+.archive-link { margin-top: 0.8rem; }
+.archive-link a {
+    color: var(--ev-red);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--ev-line);
+    transition: border-color 0.2s;
+}
+.archive-link a:hover { border-bottom-color: var(--ev-red); }
+
+/* ── 「戻る」ボタン（アーカイブ・合同誌ページの下部・東京ページへ） ── */
+.back-bottom {
+    text-align: center;
+    margin: 3rem auto 1rem;
+    padding: 0 1rem;
+}
+.back-btn {
+    display: inline-block;
+    min-width: 200px;
+    padding: 0.8rem 2.2rem;
+    color: var(--ev-red);
+    background: #fff;
+    border: 2px solid var(--ev-red);
+    border-radius: 40px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+.back-btn:hover { background: rgba(178,34,34,0.06); transform: translateY(-2px); }
+
+@media (max-width: 768px) {
+    .archive-section { padding: 0 1rem; }
+    .archive-section h2 { font-size: 2rem; }
+    .back-btn { width: 100%; max-width: 320px; }
+}
